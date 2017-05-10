@@ -5,7 +5,9 @@
     <img class="img-circle squatch-referrals-avatar" src="{{gravatar referral.email default="mm" rating="pg" size=40 secure=isSecureUrl}}">
   {{/if}}
 
-  <div class="squatch-referrals-heading">{{stringEmptyHandler referral.firstName onEmpty="Anonymous"}}</div>
+  <div class="squatch-referrals-heading">
+    {{stringEmptyHandler referral.firstName onEmpty="Anonymous"}}
+  </div>
 
   <div class="squatch-referrals-description">
     <span class="hidden-sm">
@@ -28,21 +30,9 @@
       {{/if}}
     ">
       {{#if paid}}
-        {{#if reward.value}}
-          ${{math reward.value ' / 100'}}
-        {{else}}
-          {{#if referred}}
-            {{format-reward 'REFERRED' includeUnit=true}}
-          {{else}}
-            {{format-reward 'REFERRER' includeUnit=true}}
-          {{/if}}
-        {{/if}}
+        Discount Earned
       {{else}}
-        {{#if referred}}
-          {{format-reward 'REFERRED' includeUnit=true}} Pending
-        {{else}}
-          {{format-reward 'REFERRER' includeUnit=true}} Pending
-        {{/if}}
+        Discount Pending
       {{/if}}
     </span>
   </div>
@@ -63,6 +53,7 @@
 
   <div class="squatch-referrals-description" data-moment="true">{{dateReferred}}</div>
 </td>
+
 <td>
   <i class="icon squatch-referrals-icon
     {{#if paid}}
@@ -75,7 +66,7 @@
   <div class="squatch-referrals-heading hidden-sm">
     {{#if paid}}
       {{#if reward.value}}
-        ${{math reward.value ' / 100'}}
+        {{reward.value}}%
       {{else}}
         {{#if referred}}
           {{format-reward 'REFERRED' includeUnit=true}}
@@ -96,9 +87,9 @@
     {{/if}}
   ">
     {{#if paid}}
-      Free Credit
+      Discount Earned
     {{else}}
-      Credit Pending
+      Discount Pending
     {{/if}}
   </div>
 </td>

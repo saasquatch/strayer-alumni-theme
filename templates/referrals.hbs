@@ -21,10 +21,8 @@
             referred=""
             reward=referredBy.referredReward
             dateReferred=referredBy.dateReferred}}
-  
-            {{!-- TODO: Switch the second line below out with the line directly below when we've updated to Handlebars.java 2.2.0 --}}
-            {{!-- {{> (stringFormat 'programs/%s/referral' programDetails.referredRewardDetails.rewardType)}} --}}
-            {{> programs/CREDIT/referral}}
+
+             {{> (stringFormat "programs/%s/referral" programDetails.referredRewardDetails.rewardType)}}
           {{/block}}
         </tr>
       {{/unless}}
@@ -41,10 +39,8 @@
             heading=""
             reward=referrerReward
             programDetails=../programDetails}}
-  
-            {{!-- TODO: Switch the second line below out with the line directly below when we've updated to Handlebars.java 2.2.0 --}}
-            {{!-- {{> (stringFormat 'programs/%s/referral' programDetails.referredRewardDetails.rewardType)}} --}}
-            {{> programs/CREDIT/referral}}
+
+             {{> (stringFormat "programs/%s/referral" programDetails.referredRewardDetails.rewardType)}}
           {{/block}}
         </tr>
       {{/unless}}
@@ -60,8 +56,9 @@
             unit=unit
             value=value
             dateGiven=dateGiven}}
-  
-            {{> programs/CREDIT/reward}}
+
+            {{> (stringFormat 'programs/%s/reward' programDetails.referredRewardDetails.rewardType)}}
+
           {{/block}}
         </tr>
       {{/unless}}
