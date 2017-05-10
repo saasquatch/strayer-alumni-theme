@@ -9,7 +9,7 @@ Setup
 To get started, clone the project, install [saasquatch-cli](https://github.com/saasquatch/saasquatch-cli) and start the server. You will need node.js.
 
 ```bash
-$ git clone git@github.com:saasquatch/dollar-credit-theme.git
+$ git clone git@github.com:saasquatch/default-theme.git
 $ cd dollar-credit-theme
 $ npm install -g saasquatch-cli
 $ squatch serve
