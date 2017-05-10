@@ -66,6 +66,20 @@
                      }
                   }
                }
+            },
+            "fuelTankAutofillUrls":{
+               "type":"array",
+               "items":{
+                  "type":"object",
+                  "properties":{
+                     "url":{
+                        "type":"string"
+                     },
+                     "formSelector":{
+                        "type":"string"
+                     }
+                  }
+               }
             }
          }
       },
@@ -96,7 +110,7 @@
                                        "default":"#4486E1"
                                     },
                                     "heading":{
-                                      "default":"Give {{format-reward 'REFERRED' includeUnit=true}} and Get {{format-reward 'REFERRER' includeUnit=true}}!"
+                                       "default":"Give {{format-reward 'REFERRED' includeUnit=true}} and Get {{format-reward 'REFERRER' includeUnit=true}}!"
                                     },
                                     "headerDetails":{
                                        "default":"Give a friend {{format-reward 'REFERRED' includeUnit=true}} credit off {{companyName}} and receive {{format-reward 'REFERRER' includeUnit=true}} for yourself when they pay their first bill."
