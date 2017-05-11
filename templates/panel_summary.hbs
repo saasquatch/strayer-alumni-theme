@@ -4,26 +4,20 @@
 
 <div class="squatch-stats">
   <div class="squatch-stats-item">
-    <div class="squatch-stats-title">{{referralsLength}}</div>
+    <div class="squatch-stats-title">{{math convertedReferralsCount '+' unconvertedReferralsCount}}</div>
 
     <span class="squatch-stats-description">Friends Referred</span>
   </div>
 
-  <!-- <div class="squatch-stats-item">
-    <div class="squatch-stats-title text-green">
-      {{#if dollarCreditRewardBalance.totalAssignedCredit}}
-        ${{math '(' dollarCreditRewardBalance.totalAssignedCredit '-' dollarCreditRewardBalance.totalRedeemedCredit ') / 100'}}
-      {{else}}
-        $0
-      {{/if}}
-    </div>
+  <div class="squatch-stats-item">
+    <div class="squatch-stats-title text-green">{{totalRewardsEarnedCount}}</div>
 
-    <span class="squatch-stats-description">Rewards Used</span>
+    <span class="squatch-stats-description">Rewards Earned</span>
   </div>
 
   <div class="squatch-stats-item">
-    <div class="squatch-stats-title">{{referralsLength}}</div>
+    <div class="squatch-stats-title">{{totalRewardsPendingCount}}</div>
 
     <span class="squatch-stats-description">Rewards Pending</span>
-  </div> -->
+  </div>
 </div>
