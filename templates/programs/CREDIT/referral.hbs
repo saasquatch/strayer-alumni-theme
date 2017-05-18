@@ -95,10 +95,14 @@
       text-yellow
     {{/if}}
   ">
-    {{#if paid}}
-      Free Credit
+    {{#if reward.fuelTankCode}}
+      {{#if paid}}
+        Free Credit
+      {{else}}
+        Credit Pending
+      {{/if}}
     {{else}}
-      Credit Pending
+      {{reward.fuelTankCode}}
     {{/if}}
   </div>
 </td>
