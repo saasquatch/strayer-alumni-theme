@@ -96,13 +96,13 @@
     {{/if}}
   ">
     {{#if reward.fuelTankCode}}
+      {{reward.fuelTankCode}}
+    {{else}}
       {{#if paid}}
         Free Credit
       {{else}}
         Credit Pending
       {{/if}}
-    {{else}}
-      {{reward.fuelTankCode}}
     {{/if}}
   </div>
 </td>
