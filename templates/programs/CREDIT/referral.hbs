@@ -83,6 +83,10 @@
           {{format-reward 'REFERRER' includeUnit=true}}
         {{/if}}
       {{/if}}
+
+      {{#if reward.fuelTankCode}}
+        Free Credit
+      {{/if}}
     {{else}}
       Trial Signup
     {{/if}}
@@ -96,7 +100,7 @@
     {{/if}}
   ">
     {{#if reward.fuelTankCode}}
-      {{reward.fuelTankCode}}
+      CODE: {{reward.fuelTankCode}}
     {{else}}
       {{#if paid}}
         Free Credit
