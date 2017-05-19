@@ -1,4 +1,4 @@
-<td>
+<td class="{{lower reward.type}}">
   {{#if referral.imageUrl}}
     <img class="img-circle squatch-referrals-avatar" src="{{referral.imageUrl}}">
   {{else}}
@@ -7,7 +7,7 @@
 
   <div class="squatch-referrals-heading">{{stringEmptyHandler referral.firstName onEmpty="Anonymous"}}</div>
 
-  <div class="squatch-referrals-description {{lower reward.type}}">
+  <div class="squatch-referrals-description">
     <span class="hidden-sm">
       {{#if description}}
         {{description}}
