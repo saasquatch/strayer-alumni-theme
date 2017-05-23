@@ -74,6 +74,10 @@
           {{format-reward 'REFERRER' includeUnit=true}}
         {{/if}}
       {{/if}}
+
+      {{#if reward.fuelTankCode}}
+        Discount Earned
+      {{/if}}
     {{else}}
       Trial Signup
     {{/if}}
@@ -86,10 +90,14 @@
       text-yellow
     {{/if}}
   ">
-    {{#if paid}}
-      Discount Earned
+    {{#if reward.fuelTankCode}}
+      CODE: {{reward.fuelTankCode}}
     {{else}}
-      Discount Pending
+      {{#if paid}}
+        Discount Earned
+      {{else}}
+        Discount Pending
+      {{/if}}
     {{/if}}
   </div>
 </td>
