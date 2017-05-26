@@ -29,7 +29,11 @@
     ">
       {{#if paid}}
         {{#if reward.value}}
-          ${{math reward.value ' / 100'}}
+          {{#if (stringCompare reward.unit "MONTH" emptyOnFalse=true)}}
+            {{reward.value}} Month<span class="hidden-{{math reward.value '== 1'}}">s</span>
+          {{else}}
+            ${{math reward.value ' / 100'}}
+          {{/if}}
         {{else}}
           {{#if referred}}
             {{format-reward 'REFERRED' includeUnit=true}}
