@@ -16,7 +16,7 @@
     sharelink: '{{shareLinks.shareLink}}',
     email    : {
       share : {
-        subject: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.EMAIL.emailShareSubject') space="%20"}}',
+        subject: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.EMAIL.emailShareSubject')}}',
         body: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.EMAIL.emailShareBody') space="%20"}}',
         mailToLink: 'mailto:?subject={{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.EMAIL.emailShareSubject') space="%20"}}&body={{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.EMAIL.emailShareBody') space="%20"}}',
       },
