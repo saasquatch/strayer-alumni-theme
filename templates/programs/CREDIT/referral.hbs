@@ -89,7 +89,11 @@
       {{/if}}
 
       {{#if reward.fuelTankCode}}
-        Free Credit
+        {{#if (stringCompare reward.unit "MONTH" emptyOnFalse=true)}}
+          Free Time
+        {{else}}
+          Free Credit
+        {{/if}}
       {{/if}}
     {{else}}
       Trial Signup
