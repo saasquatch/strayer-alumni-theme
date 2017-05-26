@@ -107,7 +107,11 @@
       CODE: {{reward.fuelTankCode}}
     {{else}}
       {{#if paid}}
-        Free Credit
+        {{#if (stringCompare reward.unit "MONTH" emptyOnFalse=true)}}
+          Free Time
+        {{else}}
+          Free Credit
+        {{/if}}
       {{else}}
         Credit Pending
       {{/if}}
