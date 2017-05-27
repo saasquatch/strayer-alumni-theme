@@ -273,7 +273,7 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
                     <center style="color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email</center>
                   </v:roundrect>
                   <![endif]-->
-                  <a class="social-button email" href="mailto:?subject={{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.EMAIL.emailShareSubject') space='%20'}}&body={{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.EMAIL.emailShareBody') space='%20'}}"
+                  <a class="social-button email" href="mailto:?subject={{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.EMAIL.emailShareSubject') space='%20'}}&body={{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.EMAIL.emailShareBody') space='%20'}}"
                   style="border-radius: 7px; font-family: HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 16px; color: #FFFFFF; display: inline-block; text-align: center; text-decoration: none; mso-hide: all; background: #40494E; padding: 0; min-width: 136px;">
                     <img src="{{assets 'images/email.jpg'}}" style="float: left; margin: 0; padding: 0;">
                     <span class="social-button-text" style="margin: 0; padding: 0; margin-top: 7px; margin-left: -10px; display: inline-block; min-width: 93px; max-height: 39px;">Email</span>
