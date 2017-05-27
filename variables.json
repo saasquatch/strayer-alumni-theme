@@ -613,7 +613,7 @@
                                  "title":"Twitter share body",
                                  "minLength":4,
                                  "format":"textarea",
-                                 "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true}}free credit. Use this link {{shareLinks.twitterShareLink}}",
+                                 "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true}} free credit. Use this link {{shareLinks.twitterShareLink}}",
                                  "options":{
                                     "validate":[
                                        "handlebars"
