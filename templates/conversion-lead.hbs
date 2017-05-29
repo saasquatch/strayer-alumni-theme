@@ -1,3 +1,7 @@
 <div class="squatch-lead">
-  {{variables 'widget.CONVERSION_WIDGET.content.widgetCustomization.headerDetails'}}
+  {{#if referredBy.referredReward.fuelTankCode}}
+    {{variables 'widget.CONVERSION_WIDGET.content.widgetCustomization.headerDetailsFuelTank'}}
+  {{else}}
+    {{variables 'widget.CONVERSION_WIDGET.content.widgetCustomization.headerDetails'}}
+  {{/if}}
 </div>
