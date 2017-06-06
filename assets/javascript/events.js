@@ -10,9 +10,13 @@ function invalidInput(element, expression) {
 
 function emailFormHandler() {
   var sendEmailBtn = document.getElementById('squatch-send-email');
+  console.log(sendEmailBtn);
   var firstName = document.getElementById('squatch-user-firstname');
+  console.log(firstName);
   var lastName = document.getElementById('squatch-user-lastname');
+  console.log(lastName);
   var emailInput = document.getElementById('squatch-user-email');
+  console.log(emailInput);
 
   handleClicks(sendEmailBtn, function() {
     var noErrors = true;
