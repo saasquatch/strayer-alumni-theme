@@ -22,15 +22,21 @@ function emailFormHandler() {
       invalidInput(firstName, firstName.value.length < 1);
     }
 
+    console.log(firstName.value);
+
     if (lastName.value.length < 1) {
       noErrors = false;
       invalidInput(lastName, lastName.value.length < 1);
     }
 
+    console.log(lastName.value);
+
     if (!isValidEmail(emailInput.value)) {
       noErrors = false;
       invalidInput(lastName, isValidEmail(emailInput.value));
     }
+
+    console.log(emailInput.value);
 
     if (noErrors) {
       my_removeClass(firstName, 'invalid');
