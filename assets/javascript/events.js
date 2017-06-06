@@ -13,9 +13,9 @@ function emailFormHandler() {
   var firstName = document.getElementById('squatch-user-firstname');
   var lastName = document.getElementById('squatch-user-lastname');
   var emailInput = document.getElementById('squatch-user-email');
-  var noErrors = true;
 
   handleClicks(sendEmailBtn, function() {
+    var noErrors = true;
 
     if (firstName.value.length < 1) {
       noErrors = false;
