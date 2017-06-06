@@ -228,6 +228,22 @@
                                           ]
                                        }
                                     },
+                                    "registrationFields": {
+                                      "title":"Optional Registration Fields",
+                                      "type":"object",
+                                      "properties":{
+                                        "firstName":{
+                                          "title":"First Name",
+                                          "type":"boolean",
+                                          "default":true
+                                        },
+                                        "lastName":{
+                                          "title":"Last Name",
+                                          "type":"boolean",
+                                          "default":true
+                                        }
+                                      }
+                                    },
                                     "buttonCopy":{
                                        "type":"string",
                                        "format":"text",
