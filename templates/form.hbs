@@ -4,10 +4,10 @@
 
   <div class="form">
     {{#if firstName}}
-      <input id="squatch-user-firstname" class="form-control" placeholder="First Name">
+      <input id="squatch-user-firstname" class="form-control" placeholder="First Name {{firstName}}">
     {{/if}}
     {{#if lastName}}
-      <input id="squatch-user-lastname" class="form-control" placeholder="Last Name">
+      <input id="squatch-user-lastname" class="form-control" placeholder="Last Name {{lastName}}">
     {{/if}}
     <input id="squatch-user-email" class="form-control" placeholder="Email (Required)"/>
     <button id="squatch-send-email" class="btn btn-primary">Continue</button>
