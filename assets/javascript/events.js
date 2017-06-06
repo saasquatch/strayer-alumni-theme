@@ -37,7 +37,8 @@ function emailFormHandler() {
 
     if (!isValidEmail(emailInput.value)) {
       noErrors = false;
-      invalidInput(emailInput, isValidEmail(emailInput.value));
+      var isValid = isValidEmail(emailInput.value);
+      invalidInput(emailInput, isValid);
     }
 
     console.log(emailInput.value);
