@@ -21,14 +21,14 @@ function emailFormHandler() {
   handleClicks(sendEmailBtn, function() {
     var noErrors = true;
 
-    if (firstName.value.length < 1) {
+    if (firstName && firstName.value.length < 1) {
       noErrors = false;
       invalidInput(firstName, firstName.value.length < 1);
     }
 
     console.log(firstName.value);
 
-    if (lastName.value.length < 1) {
+    if (lastName && lastName.value.length < 1) {
       noErrors = false;
       invalidInput(lastName, lastName.value.length < 1);
     }
