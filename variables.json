@@ -234,8 +234,7 @@
                                        "minLength":1,
                                        "title":"Button Copy",
                                        "default":"COPY CODE"
-                                    },
-                                    
+                                    }
                                  }
                               },
                               {
