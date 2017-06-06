@@ -51,9 +51,13 @@
 
         <button class="close squatch-header-close" data-close-panel="#squatch-panel">Close</button>
 
-        {{#if referredBy}}
-          {{> conversion-lead}}
-          {{> conversion-share}}
+        {{#if user.email}}
+          {{#if referredBy}}
+            {{> conversion-lead}}
+            {{> conversion-share}}
+          {{/if}}
+        {{else}}
+          {{> form}}
         {{/if}}
       </div>
 

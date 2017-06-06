@@ -138,6 +138,24 @@
                                              "handlebars"
                                           ]
                                        }
+                                    },
+                                    "registrationFields": {
+                                      "title":"Optional Registration Fields",
+                                      "type":"object",
+                                      "properties":{
+                                        "firstName":{
+                                          "title":"First Name",
+                                          "type":"boolean",
+                                          "format": "checkbox",
+                                          "default":true
+                                        },
+                                        "lastName":{
+                                          "title":"Last Name",
+                                          "type":"boolean",
+                                          "format": "checkbox",
+                                          "default":true
+                                        }
+                                      }
                                     }
                                  }
                               },
