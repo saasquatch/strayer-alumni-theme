@@ -235,11 +235,13 @@
                                         "firstName":{
                                           "title":"First Name",
                                           "type":"boolean",
+                                          "format": "checkbox",
                                           "default":true
                                         },
                                         "lastName":{
                                           "title":"Last Name",
                                           "type":"boolean",
+                                          "format": "checkbox",
                                           "default":true
                                         }
                                       }
