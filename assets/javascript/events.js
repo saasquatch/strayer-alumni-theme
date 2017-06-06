@@ -1,26 +1,49 @@
+function invalidInput(element, expression) {
+  my_addClass(element, 'invalid');
+  element.onkeypress = function() {
+    if (expression) {
+      my_removeClass(this, 'invalid');
+      my_addClass(this, 'valid');
+    }
+  }
+}
+
 function emailFormHandler() {
   var sendEmailBtn = document.getElementById('squatch-send-email');
+  var firstName = document.getElementById('squatch-user-firstname');
+  var lastName = document.getElementById('squatch-user-lastname');
   var emailInput = document.getElementById('squatch-user-email');
+  var noErrors = true;
 
   handleClicks(sendEmailBtn, function() {
+
+    if (firstName.value.length < 1) {
+      noErrors = false;
+      invalidInput(firstName, firstName.value.length < 1);
+    }
+
+    if (lastName.value.length < 1) {
+      noErrors = false;
+      invalidInput(lastName, lastName.value.length < 1);
+    }
+
     if (!isValidEmail(emailInput.value)) {
-      my_addClass(emailInput, 'invalid');
-      emailInput.onkeypress = function() {
-        if (isValidEmail(this.value)) {
-          my_removeClass(this, 'invalid');
-          my_addClass(this, 'valid');
-        }
-      }
-    } else {
+      noErrors = false;
+      invalidInput(lastName, isValidEmail(emailInput.value));
+    }
+
+    if (noErrors) {
+      my_removeClass(firstName, 'invalid');
+      my_removeClass(lastName, 'invalid');
       my_removeClass(emailInput, 'invalid');
 
       if (window.frameElement && window.frameElement.squatchJsApi) {
         var widget = window.frameElement.squatchJsApi;
 
         if (window.parent.squatch && window.parent.squatch.widgets().eventBus) {
-          window.parent.squatch.widgets().eventBus.dispatch('submit_email', this, widget, {email: emailInput.value, firstName: 'Jorge', lastName: 'Conde'});
+          window.parent.squatch.widgets().eventBus.dispatch('submit_email', this, widget, emailInput.value);
         } else {
-          window.frameElement.squatchJsApi.reload({email: emailInput.value, firstName: 'Jorge', lastName: 'Conde'});
+          window.frameElement.squatchJsApi.reload(emailInput.value);
         }
       }
     }
