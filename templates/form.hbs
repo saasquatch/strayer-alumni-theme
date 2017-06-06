@@ -3,7 +3,13 @@
   {{text}}
 
   <div class="form">
-    <input id="squatch-user-email" class="form-control" placeholder="Email"/>
+    {{#if firstName}}
+      <input id="squatch-user-firstname" class="form-control" placeholder="First Name">
+    {{/if}}
+    {{#if lastName}}
+      <input id="squatch-user-lastname" class="form-control" placeholder="Last Name">
+    {{/if}}
+    <input id="squatch-user-email" class="form-control" placeholder="Email (Required)"/>
     <button id="squatch-send-email" class="btn btn-primary">Continue</button>
   </div>
 </div>
