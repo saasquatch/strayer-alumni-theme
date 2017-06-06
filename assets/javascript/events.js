@@ -41,9 +41,9 @@ function emailFormHandler() {
         var widget = window.frameElement.squatchJsApi;
 
         if (window.parent.squatch && window.parent.squatch.widgets().eventBus) {
-          window.parent.squatch.widgets().eventBus.dispatch('submit_email', this, widget, emailInput.value);
+          window.parent.squatch.widgets().eventBus.dispatch('submit_email', this, widget, {email: emailInput.value});
         } else {
-          window.frameElement.squatchJsApi.reload(emailInput.value);
+          window.frameElement.squatchJsApi.reload({email: emailInput.value});
         }
       }
     }
