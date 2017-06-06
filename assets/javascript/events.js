@@ -37,12 +37,13 @@ function emailFormHandler() {
 
     if (!isValidEmail(emailInput.value)) {
       noErrors = false;
-      invalidInput(lastName, isValidEmail(emailInput.value));
+      invalidInput(emailInput, isValidEmail(emailInput.value));
     }
 
     console.log(emailInput.value);
 
     if (noErrors) {
+      console.log('no errors');
       my_removeClass(firstName, 'invalid');
       my_removeClass(lastName, 'invalid');
       my_removeClass(emailInput, 'invalid');
