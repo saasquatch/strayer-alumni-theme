@@ -33,17 +33,30 @@ function emailFormHandler() {
     }
 
     if (noErrors) {
-      if (firstName) my_removeClass(firstName, 'invalid');
-      if (lastName) my_removeClass(lastName, 'invalid');
-      if (emailInput) my_removeClass(emailInput, 'invalid');
+      var paramsObj = {};
+
+      if (firstName) {
+        my_removeClass(firstName, 'invalid');
+        paramsObj.firstName = firstName.value;
+      }
+
+      if (lastName) {
+         my_removeClass(lastName, 'invalid');
+         paramsObj.lastName = lastName.value;
+      }
+
+      if (emailInput) {
+        my_removeClass(emailInput, 'invalid');
+        paramsObj.email = emailInput.value;
+      }
 
       if (window.frameElement && window.frameElement.squatchJsApi) {
         var widget = window.frameElement.squatchJsApi;
 
         if (window.parent.squatch && window.parent.squatch.widgets().eventBus) {
-          window.parent.squatch.widgets().eventBus.dispatch('submit_email', this, widget, {email: emailInput.value});
+          window.parent.squatch.widgets().eventBus.dispatch('submit_email', this, widget, paramsObj);
         } else {
-          window.frameElement.squatchJsApi.reload({email: emailInput.value});
+          window.frameElement.squatchJsApi.reload(paramsObj);
         }
       }
     }
