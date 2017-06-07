@@ -1,7 +1,6 @@
 function invalidInput(element, fn) {
   my_addClass(element, 'invalid');
   element.onkeypress = function() {
-    console.log(fn);
     if (fn(element.value)) {
       my_removeClass(this, 'invalid');
       my_addClass(this, 'valid');
@@ -32,6 +31,8 @@ function emailFormHandler() {
       noErrors = false;
       invalidInput(emailInput, function(e) { return isValidEmail(e); });
     }
+
+    console.log(noErrors);
 
     if (noErrors) {
       console.log('no errors');
