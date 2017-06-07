@@ -1,8 +1,8 @@
-function invalidInput(element, expression) {
+function invalidInput(element, fn) {
   my_addClass(element, 'invalid');
   element.onkeypress = function() {
-    console.log(expression);
-    if (expression) {
+    console.log(fn);
+    if (fn(element.value)) {
       my_removeClass(this, 'invalid');
       my_addClass(this, 'valid');
     }
@@ -11,38 +11,27 @@ function invalidInput(element, expression) {
 
 function emailFormHandler() {
   var sendEmailBtn = document.getElementById('squatch-send-email');
-  console.log(sendEmailBtn);
   var firstName = document.getElementById('squatch-user-firstname');
-  console.log(firstName);
   var lastName = document.getElementById('squatch-user-lastname');
-  console.log(lastName);
   var emailInput = document.getElementById('squatch-user-email');
-  console.log(emailInput);
 
   handleClicks(sendEmailBtn, function() {
     var noErrors = true;
 
     if (firstName && firstName.value.length < 1) {
       noErrors = false;
-      invalidInput(firstName, firstName.value.length < 1);
+      invalidInput(firstName, function(e) { return e.length < 1; });
     }
-
-    console.log(firstName.value);
 
     if (lastName && lastName.value.length < 1) {
       noErrors = false;
-      invalidInput(lastName, lastName.value.length < 1);
+      invalidInput(lastName, function(e) { return e.length < 1; });
     }
-
-    console.log(lastName.value);
 
     if (!isValidEmail(emailInput.value)) {
       noErrors = false;
-      var isValid = isValidEmail(emailInput.value);
-      invalidInput(emailInput, isValid);
+      invalidInput(emailInput, function(e) { return isValidEmail(e); });
     }
-
-    console.log(emailInput.value);
 
     if (noErrors) {
       console.log('no errors');
