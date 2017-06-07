@@ -18,30 +18,24 @@ function emailFormHandler() {
     var noErrors = true;
 
     if (firstName && firstName.value.length < 1) {
-      console.log('firstName');
       noErrors = false;
       invalidInput(firstName, function(e) { return e.length < 1; });
     }
 
     if (lastName && lastName.value.length < 1) {
-      console.log('lastName');
       noErrors = false;
       invalidInput(lastName, function(e) { return e.length < 1; });
     }
 
     if (!isValidEmail(emailInput.value)) {
-      console.log('emailInput');
       noErrors = false;
       invalidInput(emailInput, function(e) { return isValidEmail(e); });
     }
 
-    console.log(noErrors);
-
     if (noErrors) {
-      console.log('no errors');
-      my_removeClass(firstName, 'invalid');
-      my_removeClass(lastName, 'invalid');
-      my_removeClass(emailInput, 'invalid');
+      if (firstName) my_removeClass(firstName, 'invalid');
+      if (lastName) my_removeClass(lastName, 'invalid');
+      if (emailInput) my_removeClass(emailInput, 'invalid');
 
       if (window.frameElement && window.frameElement.squatchJsApi) {
         var widget = window.frameElement.squatchJsApi;
