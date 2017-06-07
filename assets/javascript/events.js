@@ -1,6 +1,7 @@
 function invalidInput(element, expression) {
   my_addClass(element, 'invalid');
   element.onkeypress = function() {
+    console.log(expression);
     if (expression) {
       my_removeClass(this, 'invalid');
       my_addClass(this, 'valid');
