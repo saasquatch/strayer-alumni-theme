@@ -62,8 +62,7 @@
       {{else}}
         {{> form
             text=(variables 'widget.REFERRER_WIDGET.content.widgetCustomization.registrationHeader')
-            firstName=(variables 'widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.firstName')
-            lastName=(variables 'widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName')}}
+            fields=(variables-object 'widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields')}}
       {{/if}}
     </main>
 

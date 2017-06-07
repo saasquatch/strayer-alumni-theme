@@ -59,8 +59,7 @@
         {{else}}
           {{> form
               text=(variables 'widget.CONVERSION_WIDGET.content.widgetCustomization.registrationHeader')
-              firstName=(variables 'widget.CONVERSION_WIDGET.content.widgetCustomization.registrationFields.firstName')
-              lastName=(variables 'widget.CONVERSION_WIDGET.content.widgetCustomization.registrationFields.lastName')}}
+              fields=(variables-object 'widget.CONVERSION_WIDGET.content.widgetCustomization.registrationFields')}}
         {{/if}}
       </div>
 

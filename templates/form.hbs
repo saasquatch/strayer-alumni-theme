@@ -3,10 +3,10 @@
   {{text}}
 
   <div class="form">
-    <input id="squatch-user-firstname" class="form-control input-field required-{{firstName}}" placeholder="First Name">
-
-    {{#if lastName}}
-      {{lookup . 'lastName'}}
+    {{#if fields.firstName}}
+      <input id="squatch-user-firstname" class="form-control input-field required-{{firstName}}" placeholder="First Name">
+    {{/if}}
+    {{#if fields.lastName}}
       <input id="squatch-user-lastname" class="form-control input-field required-{{lastName}}" placeholder="Last Name">
     {{/if}}
     <input id="squatch-user-email" class="form-control input-field" placeholder="Email (Required)"/>
