@@ -1,26 +1,62 @@
+function invalidInput(element, fn) {
+  my_addClass(element, 'invalid');
+  element.onkeypress = function() {
+    if (fn(element.value)) {
+      my_removeClass(this, 'invalid');
+      my_addClass(this, 'valid');
+    }
+  }
+}
+
 function emailFormHandler() {
   var sendEmailBtn = document.getElementById('squatch-send-email');
+  var firstName = document.getElementById('squatch-user-firstname');
+  var lastName = document.getElementById('squatch-user-lastname');
   var emailInput = document.getElementById('squatch-user-email');
 
   handleClicks(sendEmailBtn, function() {
+    var noErrors = true;
+
+    if (firstName && firstName.value.length < 1) {
+      noErrors = false;
+      invalidInput(firstName, function(e) { return e.length < 1; });
+    }
+
+    if (lastName && lastName.value.length < 1) {
+      noErrors = false;
+      invalidInput(lastName, function(e) { return e.length < 1; });
+    }
+
     if (!isValidEmail(emailInput.value)) {
-      my_addClass(emailInput, 'invalid');
-      emailInput.onkeypress = function() {
-        if (isValidEmail(this.value)) {
-          my_removeClass(this, 'invalid');
-          my_addClass(this, 'valid');
-        }
+      noErrors = false;
+      invalidInput(emailInput, function(e) { return isValidEmail(e); });
+    }
+
+    if (noErrors) {
+      var paramsObj = {};
+
+      if (firstName) {
+        my_removeClass(firstName, 'invalid');
+        paramsObj.firstName = firstName.value;
       }
-    } else {
-      my_removeClass(emailInput, 'invalid');
+
+      if (lastName) {
+         my_removeClass(lastName, 'invalid');
+         paramsObj.lastName = lastName.value;
+      }
+
+      if (emailInput) {
+        my_removeClass(emailInput, 'invalid');
+        paramsObj.email = emailInput.value;
+      }
 
       if (window.frameElement && window.frameElement.squatchJsApi) {
         var widget = window.frameElement.squatchJsApi;
 
         if (window.parent.squatch && window.parent.squatch.widgets().eventBus) {
-          window.parent.squatch.widgets().eventBus.dispatch('submit_email', this, widget, emailInput.value);
+          window.parent.squatch.widgets().eventBus.dispatch('submit_email', this, widget, paramsObj);
         } else {
-          window.frameElement.squatchJsApi.reload(emailInput.value);
+          window.frameElement.squatchJsApi.reload(paramsObj);
         }
       }
     }

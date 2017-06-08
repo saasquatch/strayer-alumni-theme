@@ -51,9 +51,15 @@
 
         <button class="close squatch-header-close" data-close-panel="#squatch-panel">Close</button>
 
-        {{#if referredBy}}
-          {{> conversion-lead}}
-          {{> conversion-share}}
+        {{#if user.email}}
+          {{#if referredBy}}
+            {{> conversion-lead}}
+            {{> conversion-share}}
+          {{/if}}
+        {{else}}
+          {{> form
+              text=(variables 'widget.CONVERSION_WIDGET.content.widgetCustomization.registrationHeader')
+              fields=(variables-object 'widget.CONVERSION_WIDGET.content.widgetCustomization.registrationFields')}}
         {{/if}}
       </div>
 
