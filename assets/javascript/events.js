@@ -117,6 +117,13 @@ function whatsappHandler() {
   var whatsappUrl = 'whatsapp://send?text=' + squatch.user.whatsapp.body;
   whatsappBtn.href = whatsappUrl;
 
+  var md = new MobileDetect('Version/4.0 Mobile Safari/534.30');
+  var UA = md.userAgent();
+
+  if (UA === 'Safari') {
+    whatsappBtn.target = '_parent';
+  }
+
   handleClicks(whatsappBtn, function(e) {
     if (window.frameElement && window.frameElement.squatchJsApi) {
       window.frameElement.squatchJsApi._shareEvent(window.squatch, 'WHATSAPP');
