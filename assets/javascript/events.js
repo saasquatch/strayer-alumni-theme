@@ -65,7 +65,6 @@ function emailFormHandler() {
 
 function messengerHandler() {
   var messengerBtn = document.getElementsByClassName('messengerShare')[0];
-  var messengerMobile = document.getElementsByClassName('messengerMobile')[0];
 
   if (!messengerBtn) return;
 
@@ -85,11 +84,22 @@ function messengerHandler() {
       window.frameElement.squatchJsApi._shareEvent(window.squatch, 'FBMESSENGER');
     }
   });
+}
+
+function messengerMobileHandler() {
+  var messengerMobile = document.getElementsByClassName('messengerMobile')[0];
 
   if (!messengerMobile) return;
 
   var messengerMobileUrl = 'fb-messenger://share?link=' + squatch.user.facebook.link + '&app_id=' + squatch.user.facebook.appId;
   messengerMobile.href = messengerMobileUrl;
+
+  var md = new MobileDetect('Version/4.0 Mobile Safari/534.30');
+  var UA = md.userAgent();
+
+  if (UA === 'Safari') {
+    messengerMobile.target = '_parent';
+  }
 
   handleClicks(messengerMobile, function(e) {
     if (window.frameElement && window.frameElement.squatchJsApi) {
