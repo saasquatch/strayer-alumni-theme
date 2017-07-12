@@ -89,6 +89,27 @@
   }
 }
 
+.messengerShare {
+
+  &.hidden {
+    display: none;
+  }
+
+  &.mobile-only {
+    display: none;
+  }
+
+  &.desktop-only {
+    @media (max-width: @screen-sm-max) {
+      display: none;
+    }
+  }
+
+  @media (max-width: @screen-sm-max) {
+    display: none;
+  }
+}
+
 .messengerMobile {
   display: none;
 
@@ -104,12 +125,6 @@
     @media (max-width: @screen-sm-max) {
       display: none;
     }
-  }
-}
-
-.messengerShare {
-  @media (max-width: @screen-sm-max) {
-    display: none;
   }
 }
 
