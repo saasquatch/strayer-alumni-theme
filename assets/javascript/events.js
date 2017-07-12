@@ -70,9 +70,9 @@ function messengerHandler() {
   if (!messengerBtn || !messengerMobile) return;
 
   var messengerUrl = 'https://www.facebook.com/dialog/send?app_id=' + squatch.user.facebook.appId + '&link=' + squatch.user.facebook.link + '&redirect_uri=' + squatch.user.facebook.redirectUrl;
-  messengerBtn.href = messengerUrl;
-
   var messengerMobileUrl = 'fb-messenger://share?link=' + squatch.user.facebook.link + '&app_id=' + squatch.user.facebook.appId;
+
+  messengerBtn.href = messengerMobileUrl;
   messengerMobile.href = messengerMobileUrl;
 
   handleClicks(messengerBtn, function(e) {
