@@ -68,7 +68,7 @@ function messengerHandler() {
 
   if (!messengerBtn) return;
 
-  var messengerUrl = 'https://www.facebook.com/dialog/send?app_id=' + squatch.user.facebook.appId + '&link=' + squatch.user.facebook.link + '&redirect_uri=' + squatch.user.facebook.redirectUrl;
+  var messengerUrl = 'fb-messenger://share/?link=' + squatch.user.facebook.link + '&app_id=' + squatch.user.facebook.appId;
   messengerBtn.href = messengerUrl;
 
   handleClicks(messengerBtn, function(e) {
@@ -76,10 +76,8 @@ function messengerHandler() {
     if (e.type != 'touchstart') {
       e.preventDefault();
 
-      var url = messengerUrl + "&display=popup";
+      var url = 'https://www.facebook.com/dialog/send?app_id=' + squatch.user.facebook.appId + '&link=' + squatch.user.facebook.link + '&redirect_uri=' + squatch.user.facebook.redirectUrl + "&display=popup";
       window.open(url, 'fb-messenger', 'status=0,width=620,height=400');
-    } else {
-      window.open('fb-messenger://share/?link=' + squatch.user.facebook.link + '&app_id=' + squatch.user.facebook.appId);
     }
 
     if (window.frameElement && window.frameElement.squatchJsApi) {
