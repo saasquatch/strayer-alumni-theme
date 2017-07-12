@@ -653,13 +653,17 @@
                                  "title":"Display rule",
                                  "default":"desktop-only",
                                  "enum":[
-                                    "hidden",
-                                    "desktop-only"
+                                   "mobile-and-desktop",
+                                   "hidden",
+                                   "mobile-only",
+                                   "desktop-only"
                                  ],
                                  "options":{
                                     "enum_titles":[
-                                       "Hide",
-                                       "Desktop Only"
+                                      "Show",
+                                      "Hide",
+                                      "Mobile Only",
+                                      "Desktop Only"
                                     ]
                                  }
                               }

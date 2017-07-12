@@ -78,6 +78,8 @@ function messengerHandler() {
 
       var url = messengerUrl + "&display=popup";
       window.open(url, 'fb-messenger', 'status=0,width=620,height=400');
+    } else {
+      window.open('fb-messenger://share/?link=' + squatch.user.facebook.link + '&app_id=' + squatch.user.facebook.appId);
     }
 
     if (window.frameElement && window.frameElement.squatchJsApi) {
