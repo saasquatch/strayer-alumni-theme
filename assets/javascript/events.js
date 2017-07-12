@@ -73,7 +73,7 @@ function messengerHandler() {
 
   handleClicks(messengerBtn, function(e) {
     // If it's not mobile, don't use href link
-    if (e.type != 'touchstart' && (squatch.mode != 'HOSTED' || squatch.mode != 'MOBILE' || squatch.mode != 'DEMO_EMBED')) {
+    if (e.type != 'touchstart' && (squatch.mode != 'HOSTED' && squatch.mode != 'MOBILE' && squatch.mode != 'DEMO_EMBED')) {
       e.preventDefault();
 
       var url = 'https://www.facebook.com/dialog/send?app_id=' + squatch.user.facebook.appId + '&link=' + squatch.user.facebook.link + '&redirect_uri=' + squatch.user.facebook.redirectUrl + "&display=popup";
