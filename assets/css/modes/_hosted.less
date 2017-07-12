@@ -1,5 +1,6 @@
 .squatch-container-hosted,
-.squatch-container-mobile {
+.squatch-container-mobile,
+.squatch-container-demo_embed {
   .squatch-header-close,
   .squatch-actions,
   [data-close-panel] {
@@ -11,30 +12,7 @@
     display: block;
   }
 
-  .fbMobile {
-    display: none;
-
-    &.mobile-and-desktop,
-    &.mobile-only {
-      @media (max-width: @screen-sm-max) {
-        display: block;
-      }
-    }
-
-    &.hidden,
-    &.desktop-only {
-      @media (max-width: @screen-sm-max) {
-        display: none;
-      }
-    }
-  }
-
-  .fbShare {
-    @media (max-width: @screen-sm-max) {
-      display: none;
-    }
-  }
-
+  .fbMobile,
   .twMobile {
     display: none;
 
@@ -53,6 +31,7 @@
     }
   }
 
+  .fbShare,
   .twShare {
     @media (max-width: @screen-sm-max) {
       display: none;

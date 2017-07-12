@@ -86,6 +86,28 @@ function messengerHandler() {
   });
 }
 
+function messengerMobileHandler() {
+  var messengerMobile = document.getElementsByClassName('messengerMobile')[0];
+
+  if (!messengerMobile) return;
+
+  var messengerMobileUrl = 'fb-messenger://share?link=' + squatch.user.facebook.link + '&app_id=' + squatch.user.facebook.appId;
+  messengerMobile.href = messengerMobileUrl;
+
+  var md = new MobileDetect('Version/4.0 Mobile Safari/534.30');
+  var UA = md.userAgent();
+
+  if (UA === 'Safari') {
+    messengerMobile.target = '_parent';
+  }
+
+  handleClicks(messengerMobile, function(e) {
+    if (window.frameElement && window.frameElement.squatchJsApi) {
+      window.frameElement.squatchJsApi._shareEvent(window.squatch, 'FBMESSENGER');
+    }
+  });
+}
+
 function smsHandler() {
   var smsBtn = document.getElementsByClassName('smsShare')[0];
 

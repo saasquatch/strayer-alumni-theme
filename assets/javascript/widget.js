@@ -11,6 +11,7 @@
     twitterHandler();
     emailHandler();
     messengerHandler();
+    messengerMobileHandler();
     smsHandler();
     whatsappHandler();
 

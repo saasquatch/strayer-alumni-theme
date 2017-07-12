@@ -94,6 +94,32 @@
     display: none;
   }
 
+  &.mobile-only {
+    display: none;
+  }
+
+  &.desktop-only {
+    @media (max-width: @screen-sm-max) {
+      display: none;
+    }
+  }
+
+  @media (max-width: @screen-sm-max) {
+    display: none;
+  }
+}
+
+.messengerMobile {
+  display: none;
+
+  &.mobile-and-desktop,
+  &.mobile-only {
+    @media (max-width: @screen-sm-max) {
+      display: block;
+    }
+  }
+
+  &.hidden,
   &.desktop-only {
     @media (max-width: @screen-sm-max) {
       display: none;
