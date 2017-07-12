@@ -67,13 +67,10 @@ function messengerHandler() {
   var messengerBtn = document.getElementsByClassName('messengerShare')[0];
   var messengerMobile = document.getElementsByClassName('messengerMobile')[0];
 
-  if (!messengerBtn || !messengerMobile) return;
+  if (!messengerBtn) return;
 
   var messengerUrl = 'https://www.facebook.com/dialog/send?app_id=' + squatch.user.facebook.appId + '&link=' + squatch.user.facebook.link + '&redirect_uri=' + squatch.user.facebook.redirectUrl;
-  var messengerMobileUrl = 'fb-messenger://share?link=' + squatch.user.facebook.link + '&app_id=' + squatch.user.facebook.appId;
-
-  messengerBtn.href = messengerMobileUrl;
-  messengerMobile.href = messengerMobileUrl;
+  messengerBtn.href = messengerUrl;
 
   handleClicks(messengerBtn, function(e) {
     // If it's not mobile, don't use href link
@@ -88,6 +85,11 @@ function messengerHandler() {
       window.frameElement.squatchJsApi._shareEvent(window.squatch, 'FBMESSENGER');
     }
   });
+
+  if (!messengerMobile) return;
+
+  var messengerMobileUrl = 'fb-messenger://share?link=' + squatch.user.facebook.link + '&app_id=' + squatch.user.facebook.appId;
+  messengerMobile.href = messengerMobileUrl;
 
   handleClicks(messengerMobile, function(e) {
     if (window.frameElement && window.frameElement.squatchJsApi) {

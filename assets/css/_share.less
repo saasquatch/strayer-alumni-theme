@@ -89,6 +89,30 @@
   }
 }
 
+.messengerMobile {
+  display: none;
+
+  &.mobile-and-desktop,
+  &.mobile-only {
+    @media (max-width: @screen-sm-max) {
+      display: block;
+    }
+  }
+
+  &.hidden,
+  &.desktop-only {
+    @media (max-width: @screen-sm-max) {
+      display: none;
+    }
+  }
+}
+
+.messengerShare {
+  @media (max-width: @screen-sm-max) {
+    display: none;
+  }
+}
+
 .smsShare,
 .whatsappShare {
 
