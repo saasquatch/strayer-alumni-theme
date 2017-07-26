@@ -99,10 +99,11 @@
   ">
       {{#if paid}}
         {{#if reward}}
-          Name Giftcard
+          {{#if name}}{{name}} {{/if}}
+          Gift card
         {{/if}}
       {{else}}
-        Giftcard Pending
+        Gift card Pending
       {{/if}}
   </div>
 </td>
