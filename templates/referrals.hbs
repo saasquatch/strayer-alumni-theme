@@ -40,6 +40,8 @@
             reward=referrerReward
             programDetails=../programDetails}}
 
+            {{lookup . .}}
+
              {{> (stringFormat "programs/%s/referral" programDetails.referredRewardDetails.rewardType)}}
           {{/block}}
         </tr>
@@ -56,6 +58,8 @@
             unit=unit
             value=value
             dateGiven=dateGiven}}
+
+            {{lookup . .}}
 
             {{> (stringFormat 'programs/%s/reward' programDetails.referredRewardDetails.rewardType)}}
 
