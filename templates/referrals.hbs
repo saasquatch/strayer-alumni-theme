@@ -42,7 +42,12 @@
 
             {{lookup . .}}
 
-             {{> (stringFormat "programs/%s/referral" programDetails.referredRewardDetails.rewardType)}}
+            {{#if referrerReward}}
+              {{> (stringFormat "programs/%s/referral" programDetails.referrerRewardDetails.rewardType)}}
+            {{else}}
+              {{> (stringFormat "programs/%s/referral" programDetails.referrerRewardDetails.rewardType)}}
+            {{/if}}
+
           {{/block}}
         </tr>
       {{/unless}}
@@ -59,9 +64,11 @@
             value=value
             dateGiven=dateGiven}}
 
-            {{lookup . .}}
-
-            {{> (stringFormat 'programs/%s/reward' programDetails.referredRewardDetails.rewardType)}}
+            {{#if referrerReward}}
+              {{> (stringFormat 'programs/%s/reward' programDetails.referrerRewardDetails.rewardType)}}
+            {{else}}
+              {{> (stringFormat 'programs/%s/reward' programDetails.referredRewardDetails.rewardType)}}
+            {{/if}}
 
           {{/block}}
         </tr>
