@@ -113,7 +113,7 @@
                                        "default":"Give {{format-reward 'REFERRED' includeUnit=true}} and Get {{format-reward 'REFERRER' includeUnit=true}}!"
                                     },
                                     "headerDetails":{
-                                       "default":"Give a friend {{format-reward 'REFERRED' includeUnit=true}} credit off {{companyName}} and receive {{format-reward 'REFERRER' includeUnit=true}} for yourself when they pay their first bill."
+                                       "default":"Give a friend {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}} and receive {{format-reward 'REFERRER' includeUnit=true}} for yourself when they pay their first bill."
                                     },
                                     "shareCodeDetails":{
                                        "type":"string",
@@ -616,7 +616,7 @@
                                  "title":"Facebook share subject",
                                  "minLength":4,
                                  "format":"textarea",
-                                 "default":"Get {{format-reward 'REFERRED' includeUnit=true}} off {{companyName}}",
+                                 "default":"Get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}",
                                  "options":{
                                     "validate":[
                                        "handlebars"
@@ -629,7 +629,7 @@
                                  "title":"Facebook share body",
                                  "minLength":4,
                                  "format":"textarea",
-                                 "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true}} free credit. Use this link {{shareLinks.facebookShareLink}}",
+                                 "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}. Use this link {{shareLinks.facebookShareLink}}",
                                  "options":{
                                     "validate":[
                                        "handlebars"
@@ -692,7 +692,7 @@
                                  "title":"Twitter share body",
                                  "minLength":4,
                                  "format":"textarea",
-                                 "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true}} free credit. Use this link {{shareLinks.twitterShareLink}}",
+                                 "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}. Use this link {{shareLinks.twitterShareLink}}",
                                  "options":{
                                     "validate":[
                                        "handlebars"
@@ -730,7 +730,7 @@
                                  "title":"SMS share body",
                                  "minLength":4,
                                  "format":"textarea",
-                                 "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true}} free credit. Use this link {{share-link 'SMS'}}",
+                                 "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}. Use this link {{share-link 'SMS'}}",
                                  "options":{
                                     "validate":[
                                        "handlebars"
@@ -764,7 +764,7 @@
                                  "title":"WhatsApp share body",
                                  "minLength":4,
                                  "format":"textarea",
-                                 "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true}} free credit. Use this link {{share-link 'WHATSAPP'}}",
+                                 "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}. Use this link {{share-link 'WHATSAPP'}}",
                                  "options":{
                                     "validate":[
                                        "handlebars"
@@ -1008,7 +1008,7 @@
                      "title":"Share Button Header",
                      "format":"markdown",
                      "propertyOrder":6,
-                     "default":"Refer and Earn {{format-reward 'REFERRER' includeUnit=true}} of Credit",
+                     "default":"Refer and Earn {{format-reward 'REFERRER' includeUnit=true includeContextualText=true}}",
                      "options":{
                         "validate":[
                            "handlebars"
