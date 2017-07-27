@@ -400,7 +400,21 @@
                                  "default":"#Congratulations\nYour friend has signed up for a {{companyName}} Account!"
                               },
                               "bodyContent":{
-                                 "default":"You have now earned {{format-reward 'REFERRER' includeUnit=true}} of free credit with {{companyName}}. Refer more friends to save even more!"
+                                 "default":"You have now earned {{format-reward 'REFERRER' includeUnit=true}} of free credit with {{companyName}}. Refer more friends to save even more!",
+                                 "options":{
+                                   "hideFor":{
+                                     "programSettingsReferrerRewardTypes" : ["INTEGRATION"]
+                                   }
+                                 }
+                              },
+                              "giftcardBodyContent":{
+                                 "default":"You have now earned {{format-reward 'REFERRER' includeUnit=true includeContextualText=true}}. You should receive an email shortly with instructions for redemption. Refer more friends to save even more!",
+                                 "options":{
+                                   "hidden":true,
+                                   "showFor":{
+                                     "programSettingsReferrerRewardTypes" : ["INTEGRATION"]
+                                   }
+                                 }
                               }
                            }
                         },
