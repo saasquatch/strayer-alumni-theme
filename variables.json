@@ -352,10 +352,10 @@
                                  "default":"#Reward Limit\nYou have successfully referred the maximum!"
                               },
                               "bodyContent":{
-                                 "default":"Thanks for spreading the word about {{companyName}}. You've referred so many new people that you've earned the maximum amount of available credit."
+                                 "default":"Thanks for spreading the word about {{companyName}}. You've referred so many new people that you've earned the maximum number  of available rewards."
                               },
                               "shareCTA":{
-                                 "default":"However, you can keep referring new users and giving {{format-reward 'REFERRER' includeUnit=true}} off with your code. - **{{user.referralCode}}**"
+                                 "default":"However, you can keep referring new users and giving {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}} with your code. - **{{user.referralCode}}**"
                               }
                            }
                         },
@@ -400,7 +400,7 @@
                                  "default":"#Congratulations\nYour friend has signed up for a {{companyName}} Account!"
                               },
                               "bodyContent":{
-                                 "default":"You have now earned {{format-reward 'REFERRER' includeUnit=true}} of free credit with {{companyName}}. Refer more friends to save even more!",
+                                 "default":"You have now earned {{format-reward 'REFERRER' includeUnit=true includeContextualText=true}} with {{companyName}}. Refer more friends to save even more!",
                                  "options":{
                                     "hideFor":{
                                        "programSettingsReferrerRewardTypes":[
@@ -448,7 +448,7 @@
                         {
                            "properties":{
                               "subject":{
-                                 "default":"​{{stringEmptyHandler newReferral.referredUser.firstName onEmpty='A friend'}}​ helped you get one step closer to free credit with {{companyName}}​!"
+                                 "default":"​{{stringEmptyHandler newReferral.referredUser.firstName onEmpty='A friend'}}​ helped you get one step closer to {{format-reward 'REFERRER' includeUnit=true includeContextualText=true}}!"
                               },
                               "themeMapping":{
                                  "default":"emails/referral-started"
@@ -471,7 +471,7 @@
                                  "default":"#Good News!\nYour friend has signed up for a free account with {{companyName}}!"
                               },
                               "bodyContent":{
-                                 "default":"{{stringEmptyHandler newReferral.referredUser.firstName onEmpty='A friend'}}​ is currently trying out {{companyName}}. As a thank you from us, if they become a paying user, you will automatically receive {{format-reward 'REFERRER' includeUnit=true}} of free credit with {{companyName}}"
+                                 "default":"{{stringEmptyHandler newReferral.referredUser.firstName onEmpty='A friend'}}​ is currently trying out {{companyName}}. As a thank you from us, if they become a paying user, you will automatically receive {{format-reward 'REFERRER' includeUnit=true includeContextualText=true}}"
                               }
                            }
                         },
@@ -572,7 +572,7 @@
                                  "title":"Email share subject",
                                  "minLength":4,
                                  "format":"textarea",
-                                 "default":"Get {{format-reward 'REFERRED' includeUnit=true}} off {{companyName}}",
+                                 "default":"Get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}} from {{companyName}}",
                                  "options":{
                                     "validate":[
                                        "handlebars"
@@ -585,7 +585,7 @@
                                  "title":"Email share body",
                                  "minLength":4,
                                  "format":"textarea",
-                                 "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true}} free credit. Use this link {{shareLinks.emailShareLink}}",
+                                 "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}. Use this link {{shareLinks.emailShareLink}}",
                                  "options":{
                                     "validate":[
                                        "handlebars"
