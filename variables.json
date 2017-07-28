@@ -139,23 +139,23 @@
                                           ]
                                        }
                                     },
-                                    "registrationFields": {
-                                      "title":"Optional Registration Fields",
-                                      "type":"object",
-                                      "properties":{
-                                        "firstName":{
-                                          "title":"First Name",
-                                          "type":"boolean",
-                                          "format": "checkbox",
-                                          "default":true
-                                        },
-                                        "lastName":{
-                                          "title":"Last Name",
-                                          "type":"boolean",
-                                          "format": "checkbox",
-                                          "default":true
-                                        }
-                                      }
+                                    "registrationFields":{
+                                       "title":"Optional Registration Fields",
+                                       "type":"object",
+                                       "properties":{
+                                          "firstName":{
+                                             "title":"First Name",
+                                             "type":"boolean",
+                                             "format":"checkbox",
+                                             "default":true
+                                          },
+                                          "lastName":{
+                                             "title":"Last Name",
+                                             "type":"boolean",
+                                             "format":"checkbox",
+                                             "default":true
+                                          }
+                                       }
                                     }
                                  }
                               },
@@ -258,23 +258,23 @@
                                           ]
                                        }
                                     },
-                                    "registrationFields": {
-                                      "title":"Optional Registration Fields",
-                                      "type":"object",
-                                      "properties":{
-                                        "firstName":{
-                                          "title":"First Name",
-                                          "type":"boolean",
-                                          "format": "checkbox",
-                                          "default":true
-                                        },
-                                        "lastName":{
-                                          "title":"Last Name",
-                                          "type":"boolean",
-                                          "format": "checkbox",
-                                          "default":true
-                                        }
-                                      }
+                                    "registrationFields":{
+                                       "title":"Optional Registration Fields",
+                                       "type":"object",
+                                       "properties":{
+                                          "firstName":{
+                                             "title":"First Name",
+                                             "type":"boolean",
+                                             "format":"checkbox",
+                                             "default":true
+                                          },
+                                          "lastName":{
+                                             "title":"Last Name",
+                                             "type":"boolean",
+                                             "format":"checkbox",
+                                             "default":true
+                                          }
+                                       }
                                     },
                                     "buttonCopy":{
                                        "type":"string",
@@ -402,18 +402,30 @@
                               "bodyContent":{
                                  "default":"You have now earned {{format-reward 'REFERRER' includeUnit=true}} of free credit with {{companyName}}. Refer more friends to save even more!",
                                  "options":{
-                                   "hideFor":{
-                                     "programSettingsReferrerRewardTypes" : ["INTEGRATION"]
-                                   }
+                                    "hideFor":{
+                                       "programSettingsReferrerRewardTypes":[
+                                          "INTEGRATION"
+                                       ]
+                                    }
                                  }
                               },
                               "giftcardBodyContent":{
+                                 "type":"string",
+                                 "title":"Body Content",
+                                 "format":"markdown",
+                                 "propertyOrder":3,
                                  "default":"You have now earned {{format-reward 'REFERRER' includeUnit=true includeContextualText=true}}. You should receive an email shortly with instructions for redemption. Refer more friends to save even more!",
                                  "options":{
-                                   "hidden":true,
-                                   "showFor":{
-                                     "programSettingsReferrerRewardTypes" : ["INTEGRATION"]
-                                   }
+                                    "hidden":true,
+                                    "validate":[
+                                       "handlebars"
+                                    ],
+                                    "input_height":"50px",
+                                    "showFor":{
+                                       "programSettingsReferrerRewardTypes":[
+                                          "INTEGRATION"
+                                       ]
+                                    }
                                  }
                               }
                            }
@@ -667,17 +679,17 @@
                                  "title":"Display rule",
                                  "default":"desktop-only",
                                  "enum":[
-                                   "mobile-and-desktop",
-                                   "hidden",
-                                   "mobile-only",
-                                   "desktop-only"
+                                    "mobile-and-desktop",
+                                    "hidden",
+                                    "mobile-only",
+                                    "desktop-only"
                                  ],
                                  "options":{
                                     "enum_titles":[
-                                      "Show",
-                                      "Hide",
-                                      "Mobile Only",
-                                      "Desktop Only"
+                                       "Show",
+                                       "Hide",
+                                       "Mobile Only",
+                                       "Desktop Only"
                                     ]
                                  }
                               }
