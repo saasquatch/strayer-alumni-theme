@@ -6,20 +6,26 @@ A generic Theme for Referral SaaSquatch.
 Setup
 -----
 
-To get started, clone the project, install [saasquatch-cli](https://github.com/saasquatch/saasquatch-cli) and start the server. You will need node.js.
+To get started making changes to your theme:
+1. Clone the project: 
 
-```bash
-$ git clone git@github.com:saasquatch/default-theme.git
-$ cd dollar-credit-theme
-$ npm install -g saasquatch-cli
-$ squatch serve
-```
+    `$ git clone git@github.com:saasquatch/default-theme.git`
 
-Template Context
-----------------
+2. Install the [saasquatch-cli](https://github.com/saasquatch/saasquatch-cli) tool (requires node.js): 
 
-The saasquatch-cli server will compile your Handlebars theme with the referral data in `customer.json` as the template context.
+    `$ npm install -g saasquatch-cli`
 
+3. Commit and push changes to your theme repository.
+4. Use [saasquatch-cli](https://github.com/saasquatch/saasquatch-cli) to republish either your test or live tenant's theme with the latest changes from the repository:
+
+    `$ squatch publish -t test_alu125hh1si9w -k TEST_BHASKh5125Las5hL125oh3VbLmPxUSs`
+
+    **Options**
+
+    ```
+    -t, --tenant [tenant]  required - tenant alias for which tenant to use
+    -k, --apiKey [apiKey]  required - API key corresponding to the tenant
+    ```
 License
 -------
 
