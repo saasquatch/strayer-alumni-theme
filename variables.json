@@ -4,7 +4,7 @@
       "vendor":"referral-saasquatch",
       "name":"rs_schema",
       "format":"jsonschema",
-      "version":"1-2-0"
+      "version":"1-3-0"
    },
    "type":"object",
    "properties":{
@@ -621,7 +621,10 @@
                               "facebookShareImageURL":{
                                  "type":"string",
                                  "title":"Facebook URL Image",
-                                 "default":""
+                                 "default":"",
+                                 "options":{
+                                   "hidden":true
+                                 }
                               },
                               "facebookShareSubject":{
                                  "type":"string",
@@ -633,7 +636,8 @@
                                     "validate":[
                                        "handlebars"
                                     ],
-                                    "input_height":"100px"
+                                    "input_height":"100px",
+                                    "hidden":true
                                  }
                               },
                               "facebookShareBody":{
@@ -646,7 +650,8 @@
                                     "validate":[
                                        "handlebars"
                                     ],
-                                    "input_height":"100px"
+                                    "input_height":"100px",
+                                    "hidden":true
                                  }
                               },
                               "facebookDisplayRule":{
