@@ -614,6 +614,91 @@
                               }
                            }
                         },
+                        "OPENGRAPH":{
+                          "type":"object",
+                          "title":"Open Graph",
+                          "oneOf":[
+                            {
+                              "title":"Hosted",
+                              "properties":{
+                                "source":{
+                                  "type":"string",
+                                  "title":"Open Graph source",
+                                  "default":"HOSTED",
+                                  "options":{
+                                    "hidden":true
+                                  }
+                                },
+                                "og:title":{
+                                  "type":"string",
+                                  "title":"Open Graph title",
+                                  "default":"Get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}",
+                                  "options":{
+                                    "validate":[
+                                      "handlebars"
+                                    ],
+                                    "input_height":"100px"
+                                  }
+                                },
+                                "og:image":{
+                                  "type":"string",
+                                  "title":"Open Graph image",
+                                  "default":""
+                                },
+                                "og:description":{
+                                  "type":"string",
+                                  "title":"Open Graph description",
+                                  "minLength":4,
+                                  "format":"textarea",
+                                  "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}. Use this link {{shareLinks.facebookShareLink}}",
+                                  "options":{
+                                    "validate":[
+                                      "handlebars"
+                                    ],
+                                    "input_height":"100px"
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "title": "Landing Page",
+                              "properties":{
+                                "source":{
+                                  "type":"string",
+                                  "title":"Open Graph source",
+                                  "default":"LANDINGPAGE",
+                                  "options":{
+                                    "hidden":true
+                                  }
+                                },
+                                "og:title":{
+                                  "type":"string",
+                                  "title":"Open Graph title",
+                                  "default":"",
+                                  "options":{
+                                    "hidden":true
+                                  }
+                                },
+                                "og:image":{
+                                  "type":"string",
+                                  "title":"Open Graph image",
+                                  "default":"",
+                                  "options":{
+                                    "hidden":true
+                                  }
+                                },
+                                "og:description":{
+                                  "type":"string",
+                                  "title":"Open Graph description",
+                                  "default":"",
+                                  "options":{
+                                    "hidden":true
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        },
                         "FACEBOOK":{
                            "type":"object",
                            "title":"Facebook",
