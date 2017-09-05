@@ -615,16 +615,15 @@
                            }
                         },
                         "OPENGRAPH":{
-                          "type":"object",
                           "title":"Open Graph",
                           "oneOf":[
                             {
                               "title":"Hosted",
+                              "type":"object",
                               "properties":{
-                                "source":{
-                                  "type":"string",
-                                  "title":"Open Graph source",
-                                  "default":"HOSTED",
+                                "isHosted":{
+                                  "type":"boolean",
+                                  "default":true,
                                   "options":{
                                     "hidden":true
                                   }
@@ -658,44 +657,14 @@
                                     "input_height":"100px"
                                   }
                                 }
-                              }
+                              },
+                              "additionalProperties": false
                             },
                             {
                               "title": "Landing Page",
-                              "properties":{
-                                "source":{
-                                  "type":"string",
-                                  "title":"Open Graph source",
-                                  "default":"LANDINGPAGE",
-                                  "options":{
-                                    "hidden":true
-                                  }
-                                },
-                                "og:title":{
-                                  "type":"string",
-                                  "title":"Open Graph title",
-                                  "default":"",
-                                  "options":{
-                                    "hidden":true
-                                  }
-                                },
-                                "og:image":{
-                                  "type":"string",
-                                  "title":"Open Graph image",
-                                  "default":"",
-                                  "options":{
-                                    "hidden":true
-                                  }
-                                },
-                                "og:description":{
-                                  "type":"string",
-                                  "title":"Open Graph description",
-                                  "default":"",
-                                  "options":{
-                                    "hidden":true
-                                  }
-                                }
-                              }
+                              "type":"object",
+                              "properties":{},
+                              "additionalProperties": false
                             }
                           ]
                         },
