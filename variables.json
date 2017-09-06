@@ -629,6 +629,9 @@
                                     "source":{
                                       "type":"string",
                                       "default":"HOSTED",
+                                      "enum":[
+                                        "HOSTED"
+                                      ],
                                       "options":{
                                         "hidden":true
                                       }
@@ -673,6 +676,9 @@
                                     "source":{
                                       "type":"string",
                                       "default":"LANDINGPAGE",
+                                      "enum":[
+                                        "LANDINGPAGE"
+                                      ],
                                       "options":{
                                         "hidden":true
                                       }
