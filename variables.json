@@ -644,7 +644,7 @@
                                        "default":"Get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}} from {{companyName}}",
                                        "options":{
                                           "validate":[
-                                             "handlebars"
+                                            "handlebars"
                                           ],
                                           "input_height":"100px"
                                        }
