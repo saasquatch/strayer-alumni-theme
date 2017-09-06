@@ -626,9 +626,9 @@
                                   "title":"Hosted",
                                   "type":"object",
                                   "properties":{
-                                    "isHosted":{
-                                      "type":"boolean",
-                                      "default":true,
+                                    "source":{
+                                      "type":"string",
+                                      "default":"HOSTED",
                                       "options":{
                                         "hidden":true
                                       }
@@ -670,9 +670,33 @@
                                   "title": "Landing Page",
                                   "type":"object",
                                   "properties":{
-                                    "isLandingPage":{
-                                      "type":"boolean",
-                                      "default":true,
+                                    "source":{
+                                      "type":"string",
+                                      "default":"LANDINGPAGE",
+                                      "options":{
+                                        "hidden":true
+                                      }
+                                    },
+                                    "og:title":{
+                                       "type":"string",
+                                       "title":"Title",
+                                       "default":"",
+                                       "options":{
+                                          "hidden":true
+                                       }
+                                    },
+                                    "og:description":{
+                                      "type":"string",
+                                      "title":"Description",
+                                      "default":"",
+                                      "options":{
+                                        "hidden":true
+                                      }
+                                    },
+                                    "og:image":{
+                                      "type":"string",
+                                      "title":"image",
+                                      "default":"",
                                       "options":{
                                         "hidden":true
                                       }
