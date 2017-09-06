@@ -626,9 +626,9 @@
                                   "title":"Hosted",
                                   "type":"object",
                                   "properties":{
-                                    "source":{
-                                      "type":"string",
-                                      "default":"HOSTED",
+                                    "isHosted":{
+                                      "type":"boolean",
+                                      "default":true,
                                       "options":{
                                         "hidden":true
                                       }
@@ -641,7 +641,7 @@
                                        "default":"Get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}} from {{companyName}}",
                                        "options":{
                                           "validate":[
-                                             "handlebars"
+                                            "handlebars"
                                           ],
                                           "input_height":"100px"
                                        }
@@ -664,15 +664,18 @@
                                       "title":"image",
                                       "default":""
                                     }
-                                  }
+                                  },
+                                  "required":[
+                                    "isHosted"
+                                  ]
                                 },
                                 {
                                   "title": "Landing Page",
                                   "type":"object",
                                   "properties":{
-                                    "source":{
-                                      "type":"string",
-                                      "default":"LANDINGPAGE",
+                                    "isLandingPage":{
+                                      "type":"boolean",
+                                      "default":true,
                                       "options":{
                                         "hidden":true
                                       }
@@ -701,7 +704,10 @@
                                         "hidden":true
                                       }
                                     }
-                                  }
+                                  },
+                                  "required":[
+                                    "isLandingPage"
+                                  ]
                                 }
                               ]
                             }
