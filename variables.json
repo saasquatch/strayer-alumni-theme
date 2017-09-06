@@ -616,56 +616,63 @@
                         },
                         "OPENGRAPH":{
                           "title":"Open Graph",
-                          "oneOf":[
-                            {
-                              "title":"Hosted",
+                          "type":"object",
+                          "properties":{
+                            "ogSettings":{
                               "type":"object",
-                              "properties":{
-                                "isHosted":{
-                                  "type":"boolean",
-                                  "default":true,
-                                  "options":{
-                                    "hidden":true
-                                  }
+                              "title":"Open Graph Settings",
+                              "oneOf":[
+                                {
+                                  "title":"Hosted",
+                                  "type":"object",
+                                  "properties":{
+                                    "isHosted":{
+                                      "type":"boolean",
+                                      "default":true,
+                                      "options":{
+                                        "hidden":true
+                                      }
+                                    },
+                                    "og:title":{
+                                       "type":"string",
+                                       "minLength":4,
+                                       "format":"textarea",
+                                       "default":"Get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}} from {{companyName}}",
+                                       "options":{
+                                          "validate":[
+                                             "handlebars"
+                                          ],
+                                          "input_height":"100px"
+                                       }
+                                    },
+                                    "og:description":{
+                                      "type":"string",
+                                      "minLength":4,
+                                      "format":"textarea",
+                                      "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}. Use this link {{shareLinks.facebookShareLink}}",
+                                      "options":{
+                                        "validate":[
+                                          "handlebars"
+                                        ],
+                                        "input_height":"100px"
+                                      }
+                                    },
+                                    "og:image":{
+                                      "type":"string",
+                                      "default":""
+                                    }
+                                  },
+                                  "additionalProperties": false
                                 },
-                                "og:title":{
-                                   "type":"string",
-                                   "minLength":4,
-                                   "format":"textarea",
-                                   "default":"Get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}} from {{companyName}}",
-                                   "options":{
-                                      "validate":[
-                                         "handlebars"
-                                      ],
-                                      "input_height":"100px"
-                                   }
-                                },
-                                "og:description":{
-                                  "type":"string",
-                                  "minLength":4,
-                                  "format":"textarea",
-                                  "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}. Use this link {{shareLinks.facebookShareLink}}",
-                                  "options":{
-                                    "validate":[
-                                      "handlebars"
-                                    ],
-                                    "input_height":"100px"
-                                  }
-                                },
-                                "og:image":{
-                                  "type":"string",
-                                  "default":""
+                                {
+                                  "title": "Landing Page",
+                                  "type":"object",
+                                  "properties":{},
+                                  "additionalProperties": false
                                 }
-                              },
-                              "additionalProperties": false
-                            },
-                            {
-                              "title": "Landing Page",
-                              "type":"object",
-                              "properties":{},
-                              "additionalProperties": false
+                              ]
                             }
-                          ]
+                          }
                         },
                         "FACEBOOK":{
                            "type":"object",
