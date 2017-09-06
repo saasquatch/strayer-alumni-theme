@@ -635,6 +635,7 @@
                                     },
                                     "og:title":{
                                        "type":"string",
+                                       "title":"Title",
                                        "minLength":4,
                                        "format":"textarea",
                                        "default":"Get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}} from {{companyName}}",
@@ -647,6 +648,7 @@
                                     },
                                     "og:description":{
                                       "type":"string",
+                                      "title":"Description",
                                       "minLength":4,
                                       "format":"textarea",
                                       "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}. Use this link {{shareLinks.facebookShareLink}}",
@@ -659,6 +661,7 @@
                                     },
                                     "og:image":{
                                       "type":"string",
+                                      "title":"image",
                                       "default":""
                                     }
                                   },
@@ -667,7 +670,15 @@
                                 {
                                   "title": "Landing Page",
                                   "type":"object",
-                                  "properties":{},
+                                  "properties":{
+                                    "isLandingPage":{
+                                      "type":"boolean",
+                                      "default":true,
+                                      "options":{
+                                        "hidden":true
+                                      }
+                                    }
+                                  },
                                   "additionalProperties": false
                                 }
                               ]
