@@ -629,14 +629,16 @@
                                   }
                                 },
                                 "og:title":{
-                                  "type":"string",
-                                  "default":"Get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}",
-                                  "options":{
-                                    "validate":[
-                                      "handlebars"
-                                    ],
-                                    "input_height":"100px"
-                                  }
+                                   "type":"string",
+                                   "minLength":4,
+                                   "format":"textarea",
+                                   "default":"Get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}} from {{companyName}}",
+                                   "options":{
+                                      "validate":[
+                                         "handlebars"
+                                      ],
+                                      "input_height":"100px"
+                                   }
                                 },
                                 "og:description":{
                                   "type":"string",
