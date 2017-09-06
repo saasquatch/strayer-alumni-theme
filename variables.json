@@ -630,7 +630,6 @@
                                 },
                                 "og:title":{
                                   "type":"string",
-                                  "title":"Open Graph title",
                                   "default":"Get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}",
                                   "options":{
                                     "validate":[
@@ -639,14 +638,8 @@
                                     "input_height":"100px"
                                   }
                                 },
-                                "og:image":{
-                                  "type":"string",
-                                  "title":"Open Graph image",
-                                  "default":""
-                                },
                                 "og:description":{
                                   "type":"string",
-                                  "title":"Open Graph description",
                                   "minLength":4,
                                   "format":"textarea",
                                   "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}. Use this link {{shareLinks.facebookShareLink}}",
@@ -656,6 +649,10 @@
                                     ],
                                     "input_height":"100px"
                                   }
+                                },
+                                "og:image":{
+                                  "type":"string",
+                                  "default":""
                                 }
                               },
                               "additionalProperties": false
