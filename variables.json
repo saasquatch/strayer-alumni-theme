@@ -654,7 +654,7 @@
                                       "title":"Description",
                                       "minLength":4,
                                       "format":"textarea",
-                                      "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}. Use this link {{shareLinks.facebookShareLink}}",
+                                      "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}.",
                                       "options":{
                                         "validate":[
                                           "handlebars"
