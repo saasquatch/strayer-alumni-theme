@@ -4,7 +4,7 @@
       "vendor":"referral-saasquatch",
       "name":"rs_schema",
       "format":"jsonschema",
-      "version":"1-2-0"
+      "version":"1-3-0"
    },
    "type":"object",
    "properties":{
@@ -614,6 +614,105 @@
                               }
                            }
                         },
+                        "OPENGRAPH":{
+                          "title":"Open Graph Rich Links",
+                          "type":"object",
+                          "properties":{
+                            "ogSettings":{
+                              "type":"object",
+                              "title":"Link Metadata Source",
+                              "oneOf":[
+                                {
+                                  "title":"SaaSquatch Hosted",
+                                  "type":"object",
+                                  "properties":{
+                                    "source":{
+                                      "type":"string",
+                                      "default":"HOSTED",
+                                      "enum":[
+                                        "HOSTED"
+                                      ],
+                                      "options":{
+                                        "hidden":true
+                                      }
+                                    },
+                                    "og:title":{
+                                       "type":"string",
+                                       "title":"Title",
+                                       "minLength":4,
+                                       "format":"textarea",
+                                       "default":"Get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}} from {{companyName}}",
+                                       "options":{
+                                          "validate":[
+                                            "handlebars"
+                                          ],
+                                          "input_height":"100px"
+                                       }
+                                    },
+                                    "og:description":{
+                                      "type":"string",
+                                      "title":"Description",
+                                      "minLength":4,
+                                      "format":"textarea",
+                                      "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}. Use this link {{shareLinks.facebookShareLink}}",
+                                      "options":{
+                                        "validate":[
+                                          "handlebars"
+                                        ],
+                                        "input_height":"100px"
+                                      }
+                                    },
+                                    "og:image":{
+                                      "type":"string",
+                                      "title":"image",
+                                      "default":""
+                                    }
+                                  }
+                                },
+                                {
+                                  "title": "Use Referral Landing Page",
+                                  "type":"object",
+                                  "properties":{
+                                    "source":{
+                                      "type":"string",
+                                      "default":"LANDINGPAGE",
+                                      "enum":[
+                                        "LANDINGPAGE"
+                                      ],
+                                      "options":{
+                                        "hidden":true
+                                      }
+                                    },
+                                    "og:title":{
+                                       "type":"string",
+                                       "title":"Title",
+                                       "default":"",
+                                       "options":{
+                                          "hidden":true
+                                       }
+                                    },
+                                    "og:description":{
+                                      "type":"string",
+                                      "title":"Description",
+                                      "default":"",
+                                      "options":{
+                                        "hidden":true
+                                      }
+                                    },
+                                    "og:image":{
+                                      "type":"string",
+                                      "title":"image",
+                                      "default":"",
+                                      "options":{
+                                        "hidden":true
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        },
                         "FACEBOOK":{
                            "type":"object",
                            "title":"Facebook",
@@ -621,7 +720,10 @@
                               "facebookShareImageURL":{
                                  "type":"string",
                                  "title":"Facebook URL Image",
-                                 "default":""
+                                 "default":"",
+                                 "options":{
+                                   "hidden":true
+                                 }
                               },
                               "facebookShareSubject":{
                                  "type":"string",
@@ -633,7 +735,8 @@
                                     "validate":[
                                        "handlebars"
                                     ],
-                                    "input_height":"100px"
+                                    "input_height":"100px",
+                                    "hidden":true
                                  }
                               },
                               "facebookShareBody":{
@@ -646,7 +749,8 @@
                                     "validate":[
                                        "handlebars"
                                     ],
-                                    "input_height":"100px"
+                                    "input_height":"100px",
+                                    "hidden":true
                                  }
                               },
                               "facebookDisplayRule":{
