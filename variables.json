@@ -615,15 +615,15 @@
                            }
                         },
                         "OPENGRAPH":{
-                          "title":"Open Graph",
+                          "title":"Open Graph Rich Links",
                           "type":"object",
                           "properties":{
                             "ogSettings":{
                               "type":"object",
-                              "title":"Open Graph Settings",
+                              "title":"Link Metadata Source",
                               "oneOf":[
                                 {
-                                  "title":"Hosted",
+                                  "title":"SaaSquatch Hosted",
                                   "type":"object",
                                   "properties":{
                                     "source":{
@@ -670,7 +670,7 @@
                                   }
                                 },
                                 {
-                                  "title": "Landing Page",
+                                  "title": "Use Referral Landing Page",
                                   "type":"object",
                                   "properties":{
                                     "source":{
