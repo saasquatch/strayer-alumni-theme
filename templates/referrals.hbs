@@ -40,6 +40,8 @@
             reward=referrerReward
             programDetails=../programDetails}}
 
+            {{lookup . "programDetails.referrerRewardDetails.rewardType"}}
+
             {{#if referrerReward}}
               {{> (stringFormat "programs/%s/referral" programDetails.referrerRewardDetails.rewardType)}}
             {{else}}
