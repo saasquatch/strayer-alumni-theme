@@ -17,12 +17,11 @@
             referral=referredBy.referredByUser
             description="Referring User"
             heading="Referred You"
-            paid=1
             referred="Referred User"
             reward=referredBy.referredReward
             dateReferred=referredBy.dateReferred}}
 
-            {{lookup . referredBy}}
+            {{lookup . reward}}
             {{paid}}
 
              {{> (stringFormat "programs/%s/referral" programDetails.referredRewardDetails.rewardType)}}
