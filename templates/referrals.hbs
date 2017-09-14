@@ -22,6 +22,9 @@
             reward=referredBy.referredReward
             dateReferred=referredBy.dateReferred}}
 
+            {{lookup . reward}}
+            {{lookup . paid}}
+
              {{> (stringFormat "programs/%s/referral" programDetails.referredRewardDetails.rewardType)}}
           {{/block}}
         </tr>
@@ -40,12 +43,10 @@
             reward=referrerReward
             programDetails=../programDetails}}
 
-            {{lookup . "programDetails.referrerRewardDetails.rewardType"}}
-
             {{#if referrerReward}}
               {{> (stringFormat "programs/%s/referral" programDetails.referrerRewardDetails.rewardType)}}
             {{else}}
-              {{> (stringFormat "programs/%s/referral" programDetails.referrerRewardDetails.rewardType)}}
+              {{> (stringFormat "programs/%s/referral" programDetails.referredRewardDetails.rewardType)}}
             {{/if}}
 
           {{/block}}
