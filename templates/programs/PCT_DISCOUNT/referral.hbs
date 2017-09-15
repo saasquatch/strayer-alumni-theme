@@ -14,7 +14,7 @@
       {{#if description}}
         {{description}}
       {{else}}
-        {{#if paid}}
+        {{#if reward}}
           Paid User
         {{else}}
           Trial User
@@ -23,13 +23,13 @@
     </span>
 
     <span class="hidden-md
-      {{#if paid}}
+      {{#if reward}}
         text-green
       {{else}}
         text-yellow
       {{/if}}
     ">
-      {{#if paid}}
+      {{#if reward}}
         Discount Earned
       {{else}}
         Discount Pending
@@ -56,7 +56,7 @@
 
 <td>
   <i class="icon squatch-referrals-icon
-    {{#if paid}}
+    {{#if reward}}
       icon-ok-circled text-green
     {{else}}
       icon-attention text-yellow
@@ -64,7 +64,7 @@
   "></i>
 
   <div class="squatch-referrals-heading hidden-sm">
-    {{#if paid}}
+    {{#if reward}}
       {{#if reward.value}}
         {{reward.value}}%
       {{else}}
@@ -84,7 +84,7 @@
   </div>
 
   <div class="squatch-referrals-description hidden-sm
-    {{#if paid}}
+    {{#if reward}}
       text-green
     {{else}}
       text-yellow
@@ -93,7 +93,7 @@
     {{#if reward.fuelTankCode}}
       CODE: {{reward.fuelTankCode}}
     {{else}}
-      {{#if paid}}
+      {{#if reward}}
         Discount Earned
       {{else}}
         Discount Pending
