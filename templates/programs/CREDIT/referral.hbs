@@ -12,7 +12,7 @@
       {{#if description}}
         {{description}}
       {{else}}
-        {{#if paid}}
+        {{#if reward}}
           Paid User
         {{else}}
           Trial User
@@ -21,13 +21,13 @@
     </span>
 
     <span class="hidden-md
-      {{#if paid}}
+      {{#if reward}}
         text-green
       {{else}}
         text-yellow
       {{/if}}
     ">
-      {{#if paid}}
+      {{#if reward}}
         {{#if reward.value}}
           {{#if (stringCompare reward.unit "MONTH" emptyOnFalse=true)}}
             {{reward.value}} Month<span class="hidden-{{math reward.value '== 1'}}">s</span>
@@ -57,7 +57,7 @@
     {{#if heading}}
       {{heading}}
     {{else}}
-      {{#if paid}}
+      {{#if reward}}
         Signed Up
       {{else}}
         Referred
@@ -69,7 +69,7 @@
 </td>
 <td>
   <i class="icon squatch-referrals-icon
-    {{#if paid}}
+    {{#if reward}}
       icon-ok-circled text-green
     {{else}}
       icon-attention text-yellow
@@ -77,7 +77,7 @@
   "></i>
 
   <div class="squatch-referrals-heading hidden-sm">
-    {{#if paid}}
+    {{#if reward}}
       {{#if reward.value}}
         {{#if (stringCompare reward.unit "MONTH" emptyOnFalse=true)}}
           {{reward.value}} Month<span class="hidden-{{math reward.value '== 1'}}">s</span>
@@ -115,15 +115,11 @@
     {{#if reward.fuelTankCode}}
       CODE: {{reward.fuelTankCode}}
     {{else}}
-      {{#if paid}}
-        {{#if reward}}
-          {{#if (stringCompare reward.unit "MONTH" emptyOnFalse=true)}}
-            Free Time
-          {{else}}
-            Free Credit
-          {{/if}}
+      {{#if reward}}
+        {{#if (stringCompare reward.unit "MONTH" emptyOnFalse=true)}}
+          Free Time
         {{else}}
-          NO REWARD
+          Free Credit
         {{/if}}
       {{else}}
         Credit Pending
