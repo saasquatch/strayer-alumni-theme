@@ -22,8 +22,6 @@
             reward=referredBy.referredReward
             dateReferred=referredBy.dateReferred}}
 
-            {{lookup . "referredBy"}}
-
              {{> (stringFormat "programs/%s/referral" programDetails.referredRewardDetails.rewardType)}}
           {{/block}}
         </tr>
