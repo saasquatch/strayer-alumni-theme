@@ -231,13 +231,13 @@
                                        "default":"You were Successfully Referred to {{companyName}}"
                                     },
                                     "headerDetails":{
-                                       "default":"Use the Referral Code<br><span id=\"squatch-share-code\">{{referredBy.referredReward.referralCode}}</span><br>at checkout to receive your referral discount"
+                                       "default":"Use the Referral Code<br><span id=\"squatch-share-code\">{{referredBy.referredReward.referralCode}}</span><br>at checkout to receive your referral reward"
                                     },
                                     "headerDetailsFuelTank":{
                                        "type":"string",
                                        "minLength":1,
                                        "format":"markdown",
-                                       "default":"Use the Referral Code<br><span id=\"squatch-share-code\">{{referredBy.referredReward.fuelTankCode}}</span><br>at checkout to receive your referral discount",
+                                       "default":"Use the Referral Code<br><span id=\"squatch-share-code\">{{referredBy.referredReward.fuelTankCode}}</span><br>at checkout to receive your referral reward",
                                        "title":"FuelTank Body Text:",
                                        "options":{
                                           "input_height":"100px",
