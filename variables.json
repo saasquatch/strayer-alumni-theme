@@ -113,7 +113,7 @@
                                        "default":"Give {{format-reward 'REFERRED' includeUnit=true}} and Get {{format-reward 'REFERRER' includeUnit=true}}!"
                                     },
                                     "headerDetails":{
-                                       "default":"Give a friend {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}} and receive {{format-reward 'REFERRER' includeUnit=true}} for yourself when they pay their first bill."
+                                       "default":"Give a friend {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}} and receive {{format-reward 'REFERRER' includeUnit=true includeContextualText=true}} for yourself when they pay their first bill."
                                     },
                                     "shareCodeDetails":{
                                        "type":"string",
