@@ -162,7 +162,7 @@ subject: {{email.meta.subject'}}
                       {{email.content.bodyContent}}
                     </td>
                   </tr>
-                  {{#if email.content.enabled}}
+                  {{#if email.content.cta.enabled}}
                     <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
                         <td class="content-code" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 16px; color: #2d2c2c; text-align: center; line-height: 1.5; padding: 25px 0;" align="center">
                             {{email.content.cta.text}}
@@ -208,7 +208,7 @@ subject: {{email.meta.subject'}}
           <table cellspacing="0" cellpadding="0" width="500" class="w320" style="border-collapse: collapse !important; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
             <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
               <td class="footer component" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 14px !important; color: #acacac !important; text-align: center; line-height: 1.5; text-decoration: none; padding: 35px 35px 20px;" align="center">
-                {{email.content.footer}}
+                {{email.content.footerContent}}
                 Powered by <a href="http://www.referralsaasquatch.com/" style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; color: #acacac !important; font-size: 14px !important; text-decoration: none; padding-bottom: 20px;">Referral SaaSquatch</a>
               </td>
             </tr>
