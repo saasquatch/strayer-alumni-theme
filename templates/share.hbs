@@ -68,6 +68,18 @@
       <i class="icon icon-whatsapp"></i>
       WhatsApp
     </a>
+    
+    <a class="btn btn-linkedin squatch-share-btn linkedinShare {{variables 'widget.REFERRER_WIDGET.content.sharingOptions.LINKEDIN.linkedinDisplayRule'}}"
+       target="{{#if (stringCompare mode "POPUP" emptyOnFalse=true)}}_blank{{else}}{{#if (stringCompare mode "EMBED" emptyOnFalse=true)}}_blank{{else}}_self{{/if}}{{/if}}">
+      <i class="icon icon-linkedin"></i>
+      Linkedin
+    </a>
+
+    <a class="btn btn-linkedin squatch-share-btn linkedinMobile {{variables 'widget.REFERRER_WIDGET.content.sharingOptions.LINKEDIN.linkedinDisplayRule'}}"
+       target="{{#if (stringCompare mode "POPUP" emptyOnFalse=true)}}_blank{{else}}{{#if (stringCompare mode "EMBED" emptyOnFalse=true)}}_blank{{else}}_self{{/if}}{{/if}}">
+      <i class="icon icon-linkedin"></i>
+      Linkedin
+    </a>
 
   </div>
 </div>
