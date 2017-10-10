@@ -904,6 +904,48 @@
                                  }
                               }
                            }
+                        },
+                        "LINKEDIN":{
+                           "type":"object",
+                           "title":"Linkedin",
+                           "properties":{
+                             "linkedinShareImageURL":{
+                                "type":"string",
+                                "title":"Linkedin URL Image",
+                                "default":""
+                             },
+                             "linkedinShareSubject":{
+                                "type":"string",
+                                "title":"Linkedin share subject",
+                                "minLength":4,
+                                "default":"Get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}} from {{companyName}}",
+                             },
+                            "linkedinShareBody":{
+                               "type":"string",
+                               "title":"Linkedin share body",
+                               "minLength":4,
+                               "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}. Use this link {{share-link 'LINKEDIN'}}",
+                            },
+                            "linkedinDisplayRule":{
+                               "type":"string",
+                               "title":"Display rule",
+                               "default":"hidden",
+                               "enum":[
+                                 "mobile-and-desktop",
+                                 "hidden",
+                                 "mobile-only",
+                                 "desktop-only"
+                               ],
+                               "options":{
+                                  "enum_titles":[
+                                    "Show",
+                                    "Hide",
+                                    "Mobile Only",
+                                    "Desktop Only"
+                                  ]
+                               }
+                             }
+                          }
                         }
                      }
                   }
