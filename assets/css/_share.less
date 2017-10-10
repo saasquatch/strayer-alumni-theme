@@ -41,19 +41,20 @@
   }
 }
 
+.share-btn-container {
+  margin-left: -10px;
+  
+  @media (max-width: @screen-sm-max) {
+    margin-left: 0;
+  }
+}
+
 .squatch-share-btn {
   &:extend(.icon-btn all);
   width: 140px;
   display: block;
   float: left;
-
-  & + & {
-    margin-left: @grid-gutter-width;
-
-    @media (max-width: @screen-sm-max) {
-      margin-left: 0;
-    }
-  }
+  margin-left: @grid-gutter-width;
 
   html.lt-ie9 & {
     width: 139px;
@@ -62,6 +63,7 @@
   @media (max-width: @screen-sm-max) {
     width: 100%;
     margin-top: @grid-gutter-width;
+    margin-left: 0;
   }
 }
 
