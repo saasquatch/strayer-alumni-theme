@@ -53,9 +53,8 @@
   &:extend(.icon-btn all);
   width: 140px;
   display: inline-block;
-  // float: left;
-  margin-left: 6px; //changed from @grid-gutter-width to 6px
-  margin-bottom: 10px; //added to provide functionality for a fourth button
+  margin-left: 6px;
+  margin-bottom: 10px;
 
   html.lt-ie9 & {
     width: 139px;
@@ -63,9 +62,7 @@
 
   @media (max-width: @screen-sm-max) {
     width: 100%;
-    margin-top: @grid-gutter-width;
-    margin-left: 0;
-    margin-bottom: 0; //added to offset margin in media mode
+    margin-top: @grid-gutter-width 0 0;
   }
 }
 
