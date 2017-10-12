@@ -42,8 +42,8 @@
 }
 
 .share-btn-container {
-  margin-left: -10px;
-  
+  margin-left: -6px;
+  text-align: center;
   @media (max-width: @screen-sm-max) {
     margin-left: 0;
   }
@@ -52,9 +52,9 @@
 .squatch-share-btn {
   &:extend(.icon-btn all);
   width: 140px;
-  display: block;
-  float: left;
-  margin-left: @grid-gutter-width;
+  display: inline-block;
+  // float: left;
+  margin-left: 6px; //changed from @grid-gutter-width to 6px
 
   html.lt-ie9 & {
     width: 139px;
