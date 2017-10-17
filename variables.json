@@ -154,6 +154,12 @@
                                              "type":"boolean",
                                              "format":"checkbox",
                                              "default":true
+                                          },
+                                          "email":{
+                                             "title":"Email",
+                                             "type":"boolean",
+                                             "format":"checkbox",
+                                             "default":true
                                           }
                                        }
                                     }
@@ -270,6 +276,12 @@
                                           },
                                           "lastName":{
                                              "title":"Last Name",
+                                             "type":"boolean",
+                                             "format":"checkbox",
+                                             "default":true
+                                          },
+                                          "email":{
+                                             "title":"Email",
                                              "type":"boolean",
                                              "format":"checkbox",
                                              "default":true

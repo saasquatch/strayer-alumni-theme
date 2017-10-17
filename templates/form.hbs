@@ -9,7 +9,9 @@
     {{#if fields.lastName}}
       <input id="squatch-user-lastname" class="form-control input-field" placeholder="Last Name">
     {{/if}}
-    <input id="squatch-user-email" class="form-control input-field" placeholder="Email (Required)"/>
+    {{#if fields.email}}
+      <input id="squatch-user-email" class="form-control input-field" placeholder="Email"/>
+    {{/if}}
     <button id="squatch-send-email" class="btn btn-primary">Continue</button>
   </div>
 </div>
