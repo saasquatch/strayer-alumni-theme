@@ -63,6 +63,17 @@
         {{> form
             text=(variables 'widget.REFERRER_WIDGET.content.widgetCustomization.registrationHeader')
             fields=(variables-object 'widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields')}}
+        {{#unless (variables 'widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.email')}}
+          {{#unless (variables 'widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName')}}
+            {{#unless (variables 'widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName')}}
+              <div id="squatch-panel">
+                {{> panel_summary}}
+                {{> referrals}}
+                {{> attribution}}
+              </div>
+            {{/unless}}
+          {{/unless}}
+        {{/unless}}
       {{/if}}
     </main>
 
