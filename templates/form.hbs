@@ -1,17 +1,59 @@
-<div class="squatch-register">
-
-  {{text}}
-
-  <div class="form">
-    {{#if fields.firstName}}
-      <input id="squatch-user-firstname" class="form-control input-field" placeholder="First Name">
-    {{/if}}
-    {{#if fields.lastName}}
-      <input id="squatch-user-lastname" class="form-control input-field" placeholder="Last Name">
-    {{/if}}
-    {{#if fields.email}}
-      <input id="squatch-user-email" class="form-control input-field" placeholder="Email"/>
-    {{/if}}
-    <button id="squatch-send-email" class="btn btn-primary">Continue</button>
+{{#if fields.email}}
+  <div class="squatch-register">
+  
+    {{text}}
+  
+    <div class="form">
+      {{#if fields.firstName}}
+        <input id="squatch-user-firstname" class="form-control input-field" placeholder="First Name">
+      {{/if}}
+      {{#if fields.lastName}}
+        <input id="squatch-user-lastname" class="form-control input-field" placeholder="Last Name">
+      {{/if}}
+      {{#if fields.email}}
+        <input id="squatch-user-email" class="form-control input-field" placeholder="Email"/>
+      {{/if}}
+      <button id="squatch-send-email" class="btn btn-primary">Continue</button>
+    </div>
   </div>
-</div>
+{{else}}
+  {{#if fields.lastName}}
+    <div class="squatch-register">
+  
+      {{text}}
+    
+      <div class="form">
+        {{#if fields.firstName}}
+          <input id="squatch-user-firstname" class="form-control input-field" placeholder="First Name">
+        {{/if}}
+        {{#if fields.lastName}}
+          <input id="squatch-user-lastname" class="form-control input-field" placeholder="Last Name">
+        {{/if}}
+        {{#if fields.email}}
+          <input id="squatch-user-email" class="form-control input-field" placeholder="Email"/>
+        {{/if}}
+        <button id="squatch-send-email" class="btn btn-primary">Continue</button>
+      </div>
+    </div>
+  {{else}}
+    {{#if fields.firstName}}
+      <div class="squatch-register">
+  
+        {{text}}
+      
+        <div class="form">
+          {{#if fields.firstName}}
+            <input id="squatch-user-firstname" class="form-control input-field" placeholder="First Name">
+          {{/if}}
+          {{#if fields.lastName}}
+            <input id="squatch-user-lastname" class="form-control input-field" placeholder="Last Name">
+          {{/if}}
+          {{#if fields.email}}
+            <input id="squatch-user-email" class="form-control input-field" placeholder="Email"/>
+          {{/if}}
+          <button id="squatch-send-email" class="btn btn-primary">Continue</button>
+        </div>
+      </div>
+    {{/if}}
+  {{/if}}
+{{/if}}
