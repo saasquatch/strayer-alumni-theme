@@ -71,6 +71,32 @@
         </tr>
       {{/unless}}
     {{/each}}
+
+    {{#each rewardsBySource.PROGRAM}}
+      {{#unless isCancelled}}
+        <tr id="{{#if ../referredBy.dateReferred}}
+                    {{#if ../referredBy.hasCancelledReferredReward}}
+                      {{math @index '+ 1 +' referralsLength}}
+                    {{else}}
+                      {{math @index '+ 2 +' referralsLength}}
+                    {{/if}}
+                {{else}}
+                  {{math @index '+ 1 +' referralsLength}}
+                {{/if}}">
+          {{#block
+            "arbitraryReward"
+            description="No Referral"
+            heading="Applied"
+            unit=unit
+            value=value
+            dateGiven=dateGiven}}
+
+            {{> (stringFormat 'programs/%s/reward' type)}}
+
+          {{/block}}
+        </tr>
+      {{/unless}}
+    {{/each}}
   </table>
 </div>
 
