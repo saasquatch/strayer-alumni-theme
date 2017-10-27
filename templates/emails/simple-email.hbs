@@ -129,7 +129,7 @@ subject: {{{email.meta.subject}}}
                     <!-- Header Image -->
                     <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
                       <td class="friend-face" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 16px; color: #2d2c2c; text-align: center; line-height: 1.5; padding: 10px 0;" align="center">
-                        <img width="990" height="180" src="{{email.content.headerImage}}" alt="friend pic" style="max-width: 600px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;" />
+                        <img width="184" height="243" src="{{email.content.headerImage}}" alt="header image" style="max-width: 600px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;" />
                       </td>
                     </tr>
                     <!-- Header Image End -->
@@ -180,7 +180,7 @@ subject: {{{email.meta.subject}}}
                                 <div align="center" class="button-container center" style="padding-right: 10px; padding-left: 10px; padding-top:10px; padding-bottom:10px;">
   <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top:10px; padding-bottom:10px;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="" style="height:42px; v-text-anchor:middle; width:122px;" arcsize="10%" strokecolor="#9F9F9F" fillcolor="#9F9F9F"><w:anchorlock/><center style="color:#ffffff; font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size:16px;"><![endif]-->
     <div style="color: #ffffff; background-color: #9F9F9F; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; max-width: 122px; width: 82px;width: auto; border-top: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-left: 0px solid transparent; padding-top: 5px; padding-right: 20px; padding-bottom: 5px; padding-left: 20px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; text-align: center; mso-border-alt: none;">
-      <a href=""><span style="font-size:16px;line-height:32px;">{{{email.content.cta.text}}}</span></a>
+      <a href="{{email.content.cta.link}}"><span style="font-size:16px;line-height:32px;">{{{email.content.cta.text}}}</span></a>
     </div>
   <!--[if mso]></center></v:roundrect></td></tr></table><![endif]-->
 </div>
