@@ -1,3 +1,8 @@
+---
+from: {{{email.meta.fromAddress}}}
+fromName: {{{email.meta.fromName}}}
+subject: {{{email.meta.subject}}}
+---
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
   <head>
@@ -79,7 +84,7 @@
         max-height: none !important; display: block !important; font-size: 16px !important;
       }
       a[class~="hide"] {
-        max-height: 39px !important; font-size: 16px !important; line-height: 39px !important; padding-bottom: 10px !important; position: relative !important; background-image: url(https://res.cloudinary.com/dwde8d8fq/image/upload/v1444557921/social_mobile_17_njfexy.jpg); background-repeat: no-repeat; border-radius: 7px; display: inline-block;
+        max-height: 39px !important; font-size: 16px !important; line-height: 39px !important; padding-bottom: 10px !important; position: relative !important; background-image: url({{email.content.headerImage}}); background-repeat: no-repeat; border-radius: 7px; display: inline-block;
       }
       span[class~="mobile-hide"] {
         max-height: 0 !important; display: none !important; mso-hide: all !important; overflow: hidden !important; font-size: 0 !important;
