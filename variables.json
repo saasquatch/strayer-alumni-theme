@@ -185,6 +185,9 @@
                               },
                               "noReferrals": {
                                  "default": "No Referrals Yet..."
+                              },
+                              "attribution": {
+                                 "default": "Powered By Saasquatch"
                               }
                            }
                         }
