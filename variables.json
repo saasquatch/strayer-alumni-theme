@@ -176,6 +176,17 @@
                                  "$ref":"#/definitions/widget/definitions/content/definitions/shareContent"
                               }
                            ]
+                        },
+                        "textVariables":{
+                           "title": "Text Variables",
+                           "properties": {
+                              "showDetails": {
+                                 "default": "Show Details"
+                              },
+                              "noReferrals": {
+                                 "default": "No Referrals Yet..."
+                              }
+                           }
                         }
                      }
                   },
