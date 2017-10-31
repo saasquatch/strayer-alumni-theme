@@ -179,6 +179,7 @@
                         },
                         "textVariables":{
                            "title": "Text Variables",
+                           "type": "object",
                            "properties": {
                               "showDetails": {
                                  "default": "Show Details"
