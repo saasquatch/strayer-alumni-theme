@@ -296,6 +296,11 @@
                                                 "description": {
                                                    "default":  "Free Credit {{math '1 / 1'}}"
                                                 }
+                                             },
+                                             "options": {
+                                                "validate":[
+                                                   "handlebars"
+                                                ]
                                              }
                                           },
                                           "fuelTank": {
