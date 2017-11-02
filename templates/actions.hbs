@@ -13,13 +13,13 @@
     {{/unless}}
   ">
     {{#if referrals}}
-      {{variables.widget.REFERRER_WIDGET.content.textVariables.showDetails}}
+      {{variables.widget.REFERRER_WIDGET.content.textVariables.referralsScroll.showReferrals}}
     {{else}}
       {{#if referredBy.dateReferred}}
-        {{variables.widget.REFERRER_WIDGET.content.textVariables.showDetails}}
+        {{variables.widget.REFERRER_WIDGET.content.textVariables.referralsScroll.showReferrals}}
       {{else}}
         {{#if rewardsBySource.MANUAL}}
-          {{variables.widget.REFERRER_WIDGET.content.textVariables.showDetails}}
+          {{variables.widget.REFERRER_WIDGET.content.textVariables.referralsScroll.showReferrals}}
         {{else}}
           {{variables.widget.REFERRER_WIDGET.content.textVariables.noReferrals}}
         {{/if}}

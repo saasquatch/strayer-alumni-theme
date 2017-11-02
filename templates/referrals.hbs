@@ -1,5 +1,5 @@
 <div class="squatch-referrals-title">
-  Referral Details
+  {{variables.widget.REFERRER_WIDGET.content.textVariables.referralsTitle}}
 </div>
 
 <div
@@ -101,9 +101,9 @@
 </div>
 
 <div class="squatch-referrals-actions">
-  <button class="btn btn-default disabled" data-scroll-element="#squatch-referrals-scroll" data-scroll-increment="-3">Previous</button>
+  <button class="btn btn-default disabled" data-scroll-element="#squatch-referrals-scroll" data-scroll-increment="-3">{{variables.widget.REFERRER_WIDGET.content.textVariables.referralsScroll.scrollPrevious}}</button>
 
-  <button class="btn btn-default" data-close-panel="#squatch-panel" data-scroll-reset="#squatch-referrals-scroll">Hide Details</button>
+  <button class="btn btn-default" data-close-panel="#squatch-panel" data-scroll-reset="#squatch-referrals-scroll">{{variables.widget.REFERRER_WIDGET.content.textVariables.referralsScroll.hideReferrals}}</button>
 
-  <button class="btn btn-default disabled" data-scroll-element="#squatch-referrals-scroll" data-scroll-increment="3">View More</button>
+  <button class="btn btn-default disabled" data-scroll-element="#squatch-referrals-scroll" data-scroll-increment="3">{{variables.widget.REFERRER_WIDGET.content.textVariables.referralsScroll.scrollNext}}</button>
 </div>

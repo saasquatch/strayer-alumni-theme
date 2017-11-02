@@ -1,23 +1,23 @@
 <h2 class="squatch-panel-title">
-  Rewards Dashboard
+  {{variables.widget.REFERRER_WIDGET.content.textVariables.panelTitle}}
 </h2>
 
 <div class="squatch-stats">
   <div class="squatch-stats-item">
     <div class="squatch-stats-title">{{math convertedReferralsCount '+' unconvertedReferralsCount}}</div>
 
-    <span class="squatch-stats-description">Friends Referred</span>
+    <span class="squatch-stats-description">{{variables.widget.REFERRER_WIDGET.content.textVariables.statsDescriptions.referralsNumber}}</span>
   </div>
 
   <div class="squatch-stats-item">
     <div class="squatch-stats-title text-green">{{totalRewardsEarnedCount}}</div>
 
-    <span class="squatch-stats-description">Rewards Earned</span>
+    <span class="squatch-stats-description">{{variables.widget.REFERRER_WIDGET.content.textVariables.statsDescriptions.rewardsNumber}}</span>
   </div>
 
   <div class="squatch-stats-item">
     <div class="squatch-stats-title">{{totalRewardsPendingCount}}</div>
 
-    <span class="squatch-stats-description">Rewards Pending</span>
+    <span class="squatch-stats-description">{{variables.widget.REFERRER_WIDGET.content.textVariables.statsDescriptions.rewardsPending}}</span>
   </div>
 </div>
