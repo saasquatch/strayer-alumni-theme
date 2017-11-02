@@ -181,6 +181,7 @@
                            "allOf":[
                               {
                                  "title": "Text Variables",
+                                 "type": "object",
                                  "properties": {
                                     "attribution": {
                                        "default": "Powered By Saasquatch"
