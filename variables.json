@@ -290,7 +290,7 @@
                                              "default": "${{math reward.value ' / 100'}}"
                                           },
                                           "description": {
-                                             "default": "Free Credit {{math '1 + 1'}}"
+                                             "default": "Free Credit {{reward.value}}"
                                           }
                                        }
                                     },
