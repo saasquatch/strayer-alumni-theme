@@ -290,7 +290,7 @@
                                              "default": "${{math reward.value ' / 100'}}"
                                           },
                                           "description": {
-                                             "default": "Free Credit {{reward.value}}"
+                                             "default": "Free Credit {{ referrer_dollar_amount }}{{ math programDetails.referrerRewardDetails.credit ' / 100' }}"
                                           }
                                        }
                                     },
