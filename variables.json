@@ -182,7 +182,7 @@
                            "type": "object",
                            "properties": {
                               "attribution": {
-                                 "default": "Powered By Saasquatch"
+                                 "default": "Powered By Saasquatch {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.description'}}"
                               },
                               "panelClose": {
                                  "default": "Close"
@@ -290,7 +290,7 @@
                                              "default": "${{math reward.value ' / 100'}}"
                                           },
                                           "description": {
-                                             "default": "Free Credit {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.description'}}"
+                                             "default": "Free Credit"
                                           }
                                        }
                                     },
