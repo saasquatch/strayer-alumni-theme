@@ -259,6 +259,29 @@
                                     }
                                  }
                               },
+                              "referredByUser": {
+                                 "properties": {
+                                    "description": {
+                                       "default": "Referring User"
+                                    },
+                                    "heading": {
+                                       "default": "Referred You"
+                                    },
+                                    "referred": {
+                                       "default": "Referred User"
+                                    }
+                                 }
+                              },
+                              "arbitraryReward": {
+                                 "properties": {
+                                    "description": {
+                                       "default": "No Referral"
+                                    },
+                                    "heading": {
+                                       "default": "Applied"
+                                    }
+                                 }
+                              },
                               "referralReward":{
                                  "properties": {
                                     "credit": {
