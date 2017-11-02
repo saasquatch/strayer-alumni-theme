@@ -184,7 +184,7 @@
                                  "type": "object",
                                  "properties": {
                                     "attribution": {
-                                       "default": "Powered By Saasquatch<br>{{math '1 / 1'}}"
+                                       "default": "Powered By Saasquatch"
                                     },
                                     "panelClose": {
                                        "default": "Close"

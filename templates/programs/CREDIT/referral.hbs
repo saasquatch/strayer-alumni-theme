@@ -82,7 +82,7 @@
         {{#if (stringCompare reward.unit "MONTH" emptyOnFalse=true)}}
           {{variables.widget.REFERRER_WIDGET.content.textVariables.referralReward.time.value}}
         {{else}}
-          {{variables.widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.value}}
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.value'}}
         {{/if}}
       {{else}}
         {{#if referred}}
@@ -96,7 +96,7 @@
         {{#if (stringCompare reward.unit "MONTH" emptyOnFalse=true)}}
           {{variables.widget.REFERRER_WIDGET.content.textVariables.referralReward.time.description}}
         {{else}}
-          {{variables.widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.description}}
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.description'}}
         {{/if}}
       {{/if}}
     {{else}}
