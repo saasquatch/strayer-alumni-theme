@@ -1170,7 +1170,106 @@
                   "textVariables": {
                      "type": "object",
                      "properties": {
-                        
+                        "referralReward":{
+                           "type": "object",
+                           "properties": {
+                              "credit": {
+                                 "type": "object",
+                                 "properties": {
+                                    "value": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "${{math reward.value ' / 100'}}",
+                                       "options": {
+                                          "validate":[
+                                             "handlebars"
+                                          ]
+                                       }
+                                    },
+                                    "description": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default":  "Free Credit {{math '1 / 1'}}",
+                                       "options": {
+                                          "validate":[
+                                             "handlebars"
+                                          ]
+                                       }
+                                    }
+                                 }
+                              },
+                              "fuelTank": {
+                                 "properties": {
+                                    "value": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "CODE: {{reward.fuelTankCode}}",
+                                       "options": {
+                                          "validate":[
+                                             "handlebars"
+                                          ]
+                                       }
+                                    }
+                                 }
+                              },
+                              "time": {
+                                 "properties": {
+                                    "value": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "{{reward.value}} month<span class=\"hidden-{{math reward.value '== 1'}}\">s</span>",
+                                       "options": {
+                                          "validate":[
+                                             "handlebars"
+                                          ]
+                                       }
+                                    },
+                                    "description": {
+                                       "type": "string",
+                                       "default": "Free Time"
+                                    }
+                                 }
+                              },
+                              "giftcard": {
+                                 "properties": {
+                                    "description": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "{{#if name}}{{name}} {{/if}}<br>Gift card",
+                                       "options": {
+                                          "validate":[
+                                             "handlebars"
+                                          ]
+                                       }
+                                    }
+                                 }
+                              },
+                              "percent": {
+                                 "properties": {
+                                    "value": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "{{reward.value}}%",
+                                       "options": {
+                                          "validate":[
+                                             "handlebars"
+                                          ]
+                                       }
+                                    },
+                                    "title": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "Discount"
+                                    },
+                                    "description": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "Discount Earned"
+                                    }
+                                 }
+                              }
+                           }
+                        }
                      }
                   }
                }
