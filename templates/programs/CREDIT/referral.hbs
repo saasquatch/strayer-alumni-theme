@@ -119,7 +119,7 @@
         {{#if (stringCompare reward.unit "MONTH" emptyOnFalse=true)}}
           {{variables.widget.REFERRER_WIDGET.content.textVariables.referralReward.time.description}}
         {{else}}
-          {{variables.widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.description}}
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.description'}}
         {{/if}}
       {{else}}
         {{variables.widget.REFERRER_WIDGET.content.textVariables.pendingReward.credit}}
