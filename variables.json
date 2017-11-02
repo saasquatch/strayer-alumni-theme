@@ -1179,7 +1179,6 @@
                                     "value": {
                                        "type": "string",
                                        "format": "markdown",
-                                       "default": "${{math reward.value ' / 100'}}",
                                        "options": {
                                           "validate":[
                                              "handlebars"
@@ -1189,7 +1188,6 @@
                                     "description": {
                                        "type": "string",
                                        "format": "markdown",
-                                       "default":  "Free Credit {{math '1 / 1'}}",
                                        "options": {
                                           "validate":[
                                              "handlebars"
@@ -1203,7 +1201,6 @@
                                     "value": {
                                        "type": "string",
                                        "format": "markdown",
-                                       "default": "CODE: {{reward.fuelTankCode}}",
                                        "options": {
                                           "validate":[
                                              "handlebars"
@@ -1217,7 +1214,6 @@
                                     "value": {
                                        "type": "string",
                                        "format": "markdown",
-                                       "default": "{{reward.value}} month<span class=\"hidden-{{math reward.value '== 1'}}\">s</span>",
                                        "options": {
                                           "validate":[
                                              "handlebars"
@@ -1225,8 +1221,7 @@
                                        }
                                     },
                                     "description": {
-                                       "type": "string",
-                                       "default": "Free Time"
+                                       "type": "string"
                                     }
                                  }
                               },
@@ -1235,7 +1230,6 @@
                                     "description": {
                                        "type": "string",
                                        "format": "markdown",
-                                       "default": "{{#if name}}{{name}} {{/if}}<br>Gift card",
                                        "options": {
                                           "validate":[
                                              "handlebars"
@@ -1249,7 +1243,6 @@
                                     "value": {
                                        "type": "string",
                                        "format": "markdown",
-                                       "default": "{{reward.value}}%",
                                        "options": {
                                           "validate":[
                                              "handlebars"
@@ -1258,13 +1251,11 @@
                                     },
                                     "title": {
                                        "type": "string",
-                                       "format": "markdown",
-                                       "default": "Discount"
+                                       "format": "markdown"
                                     },
                                     "description": {
                                        "type": "string",
-                                       "format": "markdown",
-                                       "default": "Discount Earned"
+                                       "format": "markdown"
                                     }
                                  }
                               }
