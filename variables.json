@@ -290,7 +290,7 @@
                                              "default": "${{math reward.value ' / 100'}}"
                                           },
                                           "description": {
-                                             "default": "Free Credit {{format-reward 'REFERRED' includeUnit=true}}"
+                                             "default": "Free Credit {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.description'}}"
                                           }
                                        }
                                     },
