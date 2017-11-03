@@ -403,9 +403,6 @@
                                        }
                                     }
                                  }
-                              },
-                              {
-                                 "$ref":"#/definitions/widget/definitions/content/definitions/textVariables"
                               }
                            ]
                         }
