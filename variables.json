@@ -316,7 +316,7 @@
                                           "giftcard": {
                                              "properties": {
                                                 "description": {
-                                                   "default": "{{#if name}}{{name}} {{/if}}<br>Gift card"
+                                                   "default": "Gift card"
                                                 }
                                              }
                                           },

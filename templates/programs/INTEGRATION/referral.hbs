@@ -98,6 +98,7 @@
     {{/if}}
   ">
       {{#if reward}}
+        {{#if name}}{{name}} {{/if}}
         {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.giftcard.description'}}
       {{else}}
         {{variables 'widget.REFERRER_WIDGET.content.textVariables.pendingReward.giftcard'}}
