@@ -285,30 +285,14 @@
                                        }
                                     },
                                     "referralReward":{
-                                       "type": "object",
                                        "properties": {
                                           "credit": {
-                                             "type": "object",
                                              "properties": {
                                                 "value": {
-                                                   "type": "string",
-                                                   "format": "markdown",
-                                                   "default": "${{math reward.value ' / 100'}}",
-                                                   "options": {
-                                                      "validate":[
-                                                         "handlebars"
-                                                      ]
-                                                   }
+                                                   "default": "${{math reward.value ' / 100'}}"
                                                 },
                                                 "description": {
-                                                   "type": "string",
-                                                   "format": "markdown",
-                                                   "default":  "Free Credit {{math '1 / 1'}}",
-                                                   "options": {
-                                                      "validate":[
-                                                         "handlebars"
-                                                      ]
-                                                   }
+                                                   "default":  "Free Credit {{math '1 / 1'}}"
                                                 }
                                              }
                                           },
@@ -1161,102 +1145,6 @@
                                        "Hide",
                                        "Mobile Only"
                                     ]
-                                 }
-                              }
-                           }
-                        }
-                     }
-                  },
-                  "textVariables": {
-                     "type": "object",
-                     "properties": {
-                        "referralReward":{
-                           "type": "object",
-                           "properties": {
-                              "credit": {
-                                 "type": "object",
-                                 "properties": {
-                                    "value": {
-                                       "type": "string",
-                                       "format": "markdown",
-                                       "options": {
-                                          "validate":[
-                                             "handlebars"
-                                          ]
-                                       }
-                                    },
-                                    "description": {
-                                       "type": "string",
-                                       "format": "markdown",
-                                       "options": {
-                                          "validate":[
-                                             "handlebars"
-                                          ]
-                                       }
-                                    }
-                                 }
-                              },
-                              "fuelTank": {
-                                 "properties": {
-                                    "value": {
-                                       "type": "string",
-                                       "format": "markdown",
-                                       "options": {
-                                          "validate":[
-                                             "handlebars"
-                                          ]
-                                       }
-                                    }
-                                 }
-                              },
-                              "time": {
-                                 "properties": {
-                                    "value": {
-                                       "type": "string",
-                                       "format": "markdown",
-                                       "options": {
-                                          "validate":[
-                                             "handlebars"
-                                          ]
-                                       }
-                                    },
-                                    "description": {
-                                       "type": "string"
-                                    }
-                                 }
-                              },
-                              "giftcard": {
-                                 "properties": {
-                                    "description": {
-                                       "type": "string",
-                                       "format": "markdown",
-                                       "options": {
-                                          "validate":[
-                                             "handlebars"
-                                          ]
-                                       }
-                                    }
-                                 }
-                              },
-                              "percent": {
-                                 "properties": {
-                                    "value": {
-                                       "type": "string",
-                                       "format": "markdown",
-                                       "options": {
-                                          "validate":[
-                                             "handlebars"
-                                          ]
-                                       }
-                                    },
-                                    "title": {
-                                       "type": "string",
-                                       "format": "markdown"
-                                    },
-                                    "description": {
-                                       "type": "string",
-                                       "format": "markdown"
-                                    }
                                  }
                               }
                            }

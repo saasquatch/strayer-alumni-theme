@@ -13,9 +13,9 @@
         {{description}}
       {{else}}
         {{#if reward}}
-          {{variables.widget.REFERRER_WIDGET.content.textVariables.completedReferral.user}}
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.completedReferral.user'}}
         {{else}}
-          {{variables.widget.REFERRER_WIDGET.content.textVariables.uncompletedReferral.user}}
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.uncompletedReferral.user'}}
         {{/if}}
       {{/if}}
     </span>
@@ -30,9 +30,9 @@
       {{#if reward}}
         {{#if reward.value}}
           {{#if (stringCompare reward.unit "MONTH" emptyOnFalse=true)}}
-            {{variables.widget.REFERRER_WIDGET.content.textVariables.referralReward.time.value}}
+            {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.time.value'}}
           {{else}}
-            {{variables.widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.value}}
+            {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.value'}}
           {{/if}}
         {{else}}
           {{#if referred}}
@@ -43,9 +43,9 @@
         {{/if}}
       {{else}}
         {{#if referred}}
-          {{variables.widget.REFERRER_WIDGET.content.textVariables.pendingReward.referredReward}}
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.pendingReward.referredReward'}}
         {{else}}
-          {{variables.widget.REFERRER_WIDGET.content.textVariables.pendingReward.referrerReward}}
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.pendingReward.referrerReward'}}
         {{/if}}
       {{/if}}
     </span>
@@ -58,9 +58,9 @@
       {{heading}}
     {{else}}
       {{#if reward}}
-        {{variables.widget.REFERRER_WIDGET.content.textVariables.completedReferral.title}}
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.completedReferral.title'}}
       {{else}}
-        {{variables.widget.REFERRER_WIDGET.content.textVariables.uncompletedReferral.title}}
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.uncompletedReferral.title'}}
       {{/if}}
     {{/if}}
   </div>
@@ -80,7 +80,7 @@
     {{#if reward}}
       {{#if reward.value}}
         {{#if (stringCompare reward.unit "MONTH" emptyOnFalse=true)}}
-          {{variables.widget.REFERRER_WIDGET.content.textVariables.referralReward.time.value}}
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.time.value'}}
         {{else}}
           {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.value'}}
         {{/if}}
@@ -94,13 +94,13 @@
 
       {{#if reward.fuelTankCode}}
         {{#if (stringCompare reward.unit "MONTH" emptyOnFalse=true)}}
-          {{variables.widget.REFERRER_WIDGET.content.textVariables.referralReward.time.description}}
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.time.description'}}
         {{else}}
           {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.description'}}
         {{/if}}
       {{/if}}
     {{else}}
-      {{variables.widget.REFERRER_WIDGET.content.textVariables.pendingReward.title}}
+      {{variables 'widget.REFERRER_WIDGET.content.textVariables.pendingReward.title'}}
     {{/if}}
   </div>
 
@@ -113,16 +113,16 @@
   ">
 
     {{#if reward.fuelTankCode}}
-      {{variables.widget.REFERRER_WIDGET.content.textVariables.referralReward.fuelTank.value}}
+      {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.fuelTank.value'}}
     {{else}}
       {{#if reward}}
         {{#if (stringCompare reward.unit "MONTH" emptyOnFalse=true)}}
-          {{variables.widget.REFERRER_WIDGET.content.textVariables.referralReward.time.description}}
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.time.description'}}
         {{else}}
           {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.description'}}
         {{/if}}
       {{else}}
-        {{variables.widget.REFERRER_WIDGET.content.textVariables.pendingReward.credit}}
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.pendingReward.credit'}}
       {{/if}}
     {{/if}}
   </div>

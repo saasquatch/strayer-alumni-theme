@@ -2,7 +2,7 @@
   <img class="img-circle squatch-referrals-avatar" src="http://www.gravatar.com/avatar/3a99ddeabe3bcca7f64938b753005735?s=40&d=mm&r=pg">
 
   <div class="squatch-referrals-heading">
-    {{variables.widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.manualTitle}}
+    {{variables 'widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.manualTitle'}}
   </div>
 
   <div class="squatch-referrals-description">
@@ -25,10 +25,10 @@
 
   <div class="squatch-referrals-heading hidden-sm">
     {{#if (stringCompare unit "CENTS" emptyOnFalse=true)}}
-        {{variables.widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.creditReward}}
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.creditReward'}}
     {{else}}
       {{#if (stringCompare unit "MONTH" emptyOnFalse=true)}}
-        {{variables.widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.timeReward}}
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.timeReward'}}
       {{else}}
         {{#if (stringCompare unit "%" emptyOnFalse=true)}}
           {{value}}{{unit}}
@@ -40,6 +40,6 @@
   </div>
 
   <div class="squatch-referrals-description hidden-sm text-green">
-    {{variables.widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.description}}
+    {{variables 'widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.description'}}
   </div>
 </td>

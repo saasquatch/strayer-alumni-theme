@@ -3,9 +3,9 @@
 
   <div class="squatch-referrals-heading">
     {{#if (stringCompare rewardSource "MANUAL" emptyOnFalse=true)}}
-      {{variables.widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.manualTitle}}
+      {{variables 'widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.manualTitle'}}
     {{else}}
-      {{variables.widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.programTitle}}
+      {{variables 'widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.programTitle'}}
     {{/if}}
     
   </div>
@@ -30,10 +30,10 @@
 
   <div class="squatch-referrals-heading hidden-sm">
     {{#if (stringCompare unit "CENTS" emptyOnFalse=true)}}
-        {{variables.widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.creditReward}}
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.creditReward'}}
     {{else}}
       {{#if (stringCompare unit "MONTH" emptyOnFalse=true)}}
-        {{variables.widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.timeReward}}
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.timeReward'}}
       {{else}}
         {{#if (stringCompare unit "%" emptyOnFalse=true)}}
           {{value}}{{unit}}
@@ -45,6 +45,6 @@
   </div>
 
   <div class="squatch-referrals-description hidden-sm text-green">
-    {{variables.widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.description}}
+    {{variables 'widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.description'}}
   </div>
 </td>
