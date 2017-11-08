@@ -13,15 +13,15 @@
     {{/unless}}
   ">
     {{#if referrals}}
-      Show Details
+      {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralsScroll.showReferrals'}}
     {{else}}
       {{#if referredBy.dateReferred}}
-        Show Details
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralsScroll.showReferrals'}}
       {{else}}
         {{#if rewardsBySource.MANUAL}}
-          Show Details
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralsScroll.showReferrals'}}
         {{else}}
-          No Referrals Yet...
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.noReferrals'}}
         {{/if}}
       {{/if}}
     {{/if}}

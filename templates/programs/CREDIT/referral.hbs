@@ -13,9 +13,9 @@
         {{description}}
       {{else}}
         {{#if reward}}
-          Paid User
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.completedReferral.user'}}
         {{else}}
-          Trial User
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.uncompletedReferral.user'}}
         {{/if}}
       {{/if}}
     </span>
@@ -30,9 +30,9 @@
       {{#if reward}}
         {{#if reward.value}}
           {{#if (stringCompare reward.unit "MONTH" emptyOnFalse=true)}}
-            {{reward.value}} Month<span class="hidden-{{math reward.value '== 1'}}">s</span>
+            {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.time.value'}}
           {{else}}
-            ${{math reward.value ' / 100'}}
+            {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.value'}}
           {{/if}}
         {{else}}
           {{#if referred}}
@@ -43,9 +43,9 @@
         {{/if}}
       {{else}}
         {{#if referred}}
-          {{format-reward 'REFERRED' includeUnit=true}} Pending
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.pendingReward.referredReward'}}
         {{else}}
-          {{format-reward 'REFERRER' includeUnit=true}} Pending
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.pendingReward.referrerReward'}}
         {{/if}}
       {{/if}}
     </span>
@@ -58,9 +58,9 @@
       {{heading}}
     {{else}}
       {{#if reward}}
-        Signed Up
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.completedReferral.title'}}
       {{else}}
-        Referred
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.uncompletedReferral.title'}}
       {{/if}}
     {{/if}}
   </div>
@@ -80,9 +80,9 @@
     {{#if reward}}
       {{#if reward.value}}
         {{#if (stringCompare reward.unit "MONTH" emptyOnFalse=true)}}
-          {{reward.value}} Month<span class="hidden-{{math reward.value '== 1'}}">s</span>
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.time.value'}}
         {{else}}
-          ${{math reward.value ' / 100'}}
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.value'}}
         {{/if}}
       {{else}}
         {{#if referred}}
@@ -94,13 +94,13 @@
 
       {{#if reward.fuelTankCode}}
         {{#if (stringCompare reward.unit "MONTH" emptyOnFalse=true)}}
-          Free Time
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.time.description'}}
         {{else}}
-          Free Credit
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.description'}}
         {{/if}}
       {{/if}}
     {{else}}
-      Trial Signup
+      {{variables 'widget.REFERRER_WIDGET.content.textVariables.pendingReward.title'}}
     {{/if}}
   </div>
 
@@ -113,16 +113,16 @@
   ">
 
     {{#if reward.fuelTankCode}}
-      CODE: {{reward.fuelTankCode}}
+      {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.fuelTank.value'}}
     {{else}}
       {{#if reward}}
         {{#if (stringCompare reward.unit "MONTH" emptyOnFalse=true)}}
-          Free Time
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.time.description'}}
         {{else}}
-          Free Credit
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.description'}}
         {{/if}}
       {{else}}
-        Credit Pending
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.pendingReward.credit'}}
       {{/if}}
     {{/if}}
   </div>

@@ -1,5 +1,5 @@
 <div class="squatch-referrals-title">
-  Referral Details
+  {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralsTitle'}}
 </div>
 
 <div
@@ -15,9 +15,9 @@
           {{#block
             "referredByUser"
             referral=referredBy.referredByUser
-            description="Referring User"
-            heading="Referred You"
-            referred="Referred User"
+            description=(variables 'widget.REFERRER_WIDGET.content.textVariables.referredByUser.description')
+            heading=(variables 'widget.REFERRER_WIDGET.content.textVariables.referredByUser.heading')
+            referred=(variables 'widget.REFERRER_WIDGET.content.textVariables.referredByUser.referred')
             reward=referredBy.referredReward
             dateReferred=referredBy.dateReferred}}
 
@@ -55,8 +55,8 @@
         <tr id="{{#if ../referredBy.dateReferred}}{{#if ../referredBy.hasCancelledReferredReward}}{{math @index '+' referralsLength}}{{else}}{{math @index '+ 1 +' referralsLength}}{{/if}}{{else}}{{math @index '+' referralsLength}}{{/if}}">
           {{#block
             "arbitraryReward"
-            description="No Referral"
-            heading="Applied"
+            description=(variables 'widget.REFERRER_WIDGET.content.textVariables.arbitraryReward.description')
+            heading=(variables 'widget.REFERRER_WIDGET.content.textVariables.arbitraryReward.heading')
             unit=unit
             value=value
             dateGiven=dateGiven}}
@@ -85,8 +85,8 @@
                 {{/if}}">
           {{#block
             "arbitraryReward"
-            description="No Referral"
-            heading="Applied"
+            description=(variables 'widget.REFERRER_WIDGET.content.textVariables.arbitraryReward.description')
+            heading=(variables 'widget.REFERRER_WIDGET.content.textVariables.arbitraryReward.heading')
             unit=unit
             value=value
             dateGiven=dateGiven}}
@@ -101,9 +101,9 @@
 </div>
 
 <div class="squatch-referrals-actions">
-  <button class="btn btn-default disabled" data-scroll-element="#squatch-referrals-scroll" data-scroll-increment="-3">Previous</button>
+  <button class="btn btn-default disabled" data-scroll-element="#squatch-referrals-scroll" data-scroll-increment="-3">{{variables 'widget.REFERRER_WIDGET.content.textVariables.referralsScroll.scrollPrevious'}}</button>
 
-  <button class="btn btn-default" data-close-panel="#squatch-panel" data-scroll-reset="#squatch-referrals-scroll">Hide Details</button>
+  <button class="btn btn-default" data-close-panel="#squatch-panel" data-scroll-reset="#squatch-referrals-scroll">{{variables 'widget.REFERRER_WIDGET.content.textVariables.referralsScroll.hideReferrals'}}</button>
 
-  <button class="btn btn-default disabled" data-scroll-element="#squatch-referrals-scroll" data-scroll-increment="3">View More</button>
+  <button class="btn btn-default disabled" data-scroll-element="#squatch-referrals-scroll" data-scroll-increment="3">{{variables 'widget.REFERRER_WIDGET.content.textVariables.referralsScroll.scrollNext'}}</button>
 </div>
