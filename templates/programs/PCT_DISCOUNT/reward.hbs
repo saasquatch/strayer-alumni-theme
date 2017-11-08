@@ -2,7 +2,12 @@
   <img class="img-circle squatch-referrals-avatar" src="http://www.gravatar.com/avatar/3a99ddeabe3bcca7f64938b753005735?s=40&d=mm&r=pg">
 
   <div class="squatch-referrals-heading">
-    {{variables 'widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.manualTitle'}}
+    {{#if (stringCompare rewardSource "MANUAL" emptyOnFalse=true)}}
+      {{variables 'widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.manualTitle'}}
+    {{else}}
+      {{variables 'widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.programTitle'}}
+    {{/if}}
+    
   </div>
 
   <div class="squatch-referrals-description">
