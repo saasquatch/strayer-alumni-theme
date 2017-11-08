@@ -154,6 +154,12 @@
                                              "type":"boolean",
                                              "format":"checkbox",
                                              "default":true
+                                          },
+                                          "email":{
+                                             "title":"Email",
+                                             "type":"boolean",
+                                             "format":"checkbox",
+                                             "default":true
                                           }
                                        }
                                     }
@@ -168,6 +174,235 @@
                            "allOf":[
                               {
                                  "$ref":"#/definitions/widget/definitions/content/definitions/shareContent"
+                              }
+                           ]
+                        },
+                        "textVariables":{
+                           "allOf":[
+                              {
+                                 "title": "Text Variables",
+                                 "type": "object",
+                                 "properties": {
+                                    "attribution": {
+                                       "default": "Powered By Saasquatch"
+                                    },
+                                    "panelClose": {
+                                       "default": "Close"
+                                    },
+                                    "registerButton": {
+                                       "default": "Continue"
+                                    },
+                                    "panelTitle": {
+                                       "default": "Rewards Dashboard"
+                                    },
+                                    "statsDescriptions": {
+                                       "title": "Referral Stat Descriptions",
+                                       "type": "object",
+                                       "properties": {
+                                          "referralsNumber": {
+                                             "default": "Friends Referred"
+                                          },
+                                          "rewardsNumber": {
+                                             "default": "Rewards Earned"
+                                          },
+                                          "rewardsPending": {
+                                             "default": "Rewards Pending"
+                                          }
+                                       }
+                                    },
+                                    "referralsTitle": {
+                                       "default": "Referral Details"
+                                    },
+                                    "referralsScroll": {
+                                       "title": "Referral Scroll Actions",
+                                       "type": "object",
+                                       "properties": {
+                                          "showReferrals": {
+                                             "default": "Show Details"
+                                          },
+                                          "hideReferrals": {
+                                             "default": "Hide Details"
+                                          },
+                                          "scrollPrevious": {
+                                             "default": "Previous"
+                                          },
+                                          "scrollNext": {
+                                             "default": "View More"
+                                          }
+                                       }
+                                    },
+                                    "shareNotification": {
+                                       "default": "Copied!"
+                                    },
+                                    "shareButtons": {
+                                       "title": "Share Buttons",
+                                       "type": "object",
+                                       "properties": {
+                                          "copy": {
+                                             "default": "Copy"
+                                          },
+                                          "email": {
+                                             "default": "Email"
+                                          },
+                                          "twitter": {
+                                             "default": "Tweet"
+                                          },
+                                          "sms": {
+                                             "default": "SMS"
+                                          },
+                                          "facebookMessenger": {
+                                             "default": "Messenger"
+                                          },
+                                          "facebook": {
+                                             "default": "Share"
+                                          },
+                                          "whatsapp": {
+                                             "default": "WhatsApp"
+                                          }
+                                       }
+                                    },
+                                    "referredByUser": {
+                                       "properties": {
+                                          "description": {
+                                             "default": "Referring User"
+                                          },
+                                          "heading": {
+                                             "default": "Referred You"
+                                          },
+                                          "referred": {
+                                             "default": "Referred User"
+                                          }
+                                       }
+                                    },
+                                    "arbitraryReward": {
+                                       "properties": {
+                                          "description": {
+                                             "default": "No Referral"
+                                          },
+                                          "heading": {
+                                             "default": "Applied"
+                                          }
+                                       }
+                                    },
+                                    "referralReward":{
+                                       "properties": {
+                                          "credit": {
+                                             "properties": {
+                                                "value": {
+                                                   "default": "${{math reward.value ' / 100'}}"
+                                                },
+                                                "description": {
+                                                   "default":  "Free Credit"
+                                                }
+                                             }
+                                          },
+                                          "fuelTank": {
+                                             "properties": {
+                                                "value": {
+                                                   "default": "CODE: {{reward.fuelTankCode}}"
+                                                }
+                                             }
+                                          },
+                                          "time": {
+                                             "properties": {
+                                                "value": {
+                                                   "default": "{{reward.value}} month<span class=\"hidden-{{math reward.value '== 1'}}\">s</span>"
+                                                },
+                                                "description": {
+                                                   "default": "Free Time"
+                                                }
+                                             }
+                                          },
+                                          "giftcard": {
+                                             "properties": {
+                                                "description": {
+                                                   "default": "Gift card"
+                                                }
+                                             }
+                                          },
+                                          "percent": {
+                                             "properties": {
+                                                "value": {
+                                                   "default": "{{reward.value}}%"
+                                                },
+                                                "title": {
+                                                   "default": "Discount"
+                                                },
+                                                "description": {
+                                                   "default": "Discount Earned"
+                                                }
+                                             }
+                                          }
+                                       }
+                                    },
+                                    "uncompletedReferral": {
+                                       "properties": {
+                                          "user": {
+                                             "default": "Trial User"
+                                          },
+                                          "title": {
+                                             "default": "Referred"
+                                          }
+                                       }
+                                    },
+                                    "completedReferral": {
+                                       "properties": {
+                                          "user": {
+                                             "default": "Paid User"
+                                          },
+                                          "title": {
+                                             "default": "Signed Up"
+                                          }
+                                       }
+                                    },
+                                    "pendingReward": {
+                                       "properties": {
+                                          "referredReward": {
+                                             "default": "{{format-reward 'REFERRED' includeUnit=true}} Pending"
+                                          },
+                                          "referrerReward": {
+                                             "default": "{{format-reward 'REFERRER' includeUnit=true}} Pending"
+                                          },
+                                          "title": {
+                                             "default": "Trial Signup"
+                                          },
+                                          "credit": {
+                                             "default": "Credit Pending"
+                                          },
+                                          "giftcard": {
+                                             "default": "Gift card Pending"
+                                          },
+                                          "percent": {
+                                             "default": "Discount Pending"
+                                          }
+                                       }
+                                    },
+                                    "noReferrals": {
+                                       "default": "No Referrals Yet..."
+                                    },
+                                    "nonReferralReward": {
+                                       "properties": {
+                                          "manualTitle": {
+                                             "default": "Manual Reward"
+                                          },
+                                          "programTitle": {
+                                             "default": "Program Reward"
+                                          },
+                                          "creditReward": {
+                                             "default": "${{math value '/ 100'}}"
+                                          },
+                                          "timeReward": {
+                                             "default": "{{value}} Month<span class=\"hidden-{{math value '== 1'}}\">s</span>"
+                                          },
+                                          "description": {
+                                             "default": "Reward Given"
+                                          },
+                                          "percentDescription": {
+                                             "default": "Discount Earned"
+                                          }
+                                       }
+                                    }
+                                 }
                               }
                            ]
                         }
@@ -270,6 +505,12 @@
                                           },
                                           "lastName":{
                                              "title":"Last Name",
+                                             "type":"boolean",
+                                             "format":"checkbox",
+                                             "default":true
+                                          },
+                                          "email":{
+                                             "title":"Email",
                                              "type":"boolean",
                                              "format":"checkbox",
                                              "default":true
@@ -904,6 +1145,48 @@
                                  }
                               }
                            }
+                        },
+                        "LINKEDIN":{
+                           "type":"object",
+                           "title":"Linkedin",
+                           "properties":{
+                             "linkedinShareImageURL":{
+                                "type":"string",
+                                "title":"Linkedin URL Image",
+                                "default":""
+                             },
+                             "linkedinShareSubject":{
+                                "type":"string",
+                                "title":"Linkedin share subject",
+                                "minLength":4,
+                                "default":"Get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}} from {{companyName}}"
+                             },
+                            "linkedinShareBody":{
+                               "type":"string",
+                               "title":"Linkedin share body",
+                               "minLength":4,
+                               "default":"Sign up for a {{companyName}} account and we both get {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}. Use this link {{share-link 'LINKEDIN'}}"
+                            },
+                            "linkedinDisplayRule":{
+                               "type":"string",
+                               "title":"Display rule",
+                               "default":"hidden",
+                               "enum":[
+                                 "mobile-and-desktop",
+                                 "hidden",
+                                 "mobile-only",
+                                 "desktop-only"
+                               ],
+                               "options":{
+                                  "enum_titles":[
+                                    "Show",
+                                    "Hide",
+                                    "Mobile Only",
+                                    "Desktop Only"
+                                  ]
+                               }
+                             }
+                          }
                         }
                      }
                   }

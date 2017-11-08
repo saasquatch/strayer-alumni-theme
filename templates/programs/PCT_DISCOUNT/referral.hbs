@@ -15,9 +15,9 @@
         {{description}}
       {{else}}
         {{#if reward}}
-          Paid User
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.completedReferral.user'}}
         {{else}}
-          Trial User
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.uncompletedReferral.user'}}
         {{/if}}
       {{/if}}
     </span>
@@ -30,9 +30,9 @@
       {{/if}}
     ">
       {{#if reward}}
-        Discount Earned
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.percent.description'}}
       {{else}}
-        Discount Pending
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.pendingReward.percent'}}
       {{/if}}
     </span>
   </div>
@@ -44,9 +44,9 @@
       {{heading}}
     {{else}}
       {{#if reward}}
-        Signed Up
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.completedReferral.title'}}
       {{else}}
-        Referred
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.uncompletedReferral.title'}}
       {{/if}}
     {{/if}}
   </div>
@@ -66,7 +66,7 @@
   <div class="squatch-referrals-heading hidden-sm">
     {{#if reward}}
       {{#if reward.value}}
-        {{reward.value}}%
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.percent.value'}}
       {{else}}
         {{#if referred}}
           {{format-reward 'REFERRED' includeUnit=true}}
@@ -76,10 +76,10 @@
       {{/if}}
 
       {{#if reward.fuelTankCode}}
-        Discount
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.percent.title'}}
       {{/if}}
     {{else}}
-      Trial Signup
+      {{variables 'widget.REFERRER_WIDGET.content.textVariables.pendingReward.title'}}
     {{/if}}
   </div>
 
@@ -91,12 +91,12 @@
     {{/if}}
   ">
     {{#if reward.fuelTankCode}}
-      CODE: {{reward.fuelTankCode}}
+      {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.fuelTank.value'}}
     {{else}}
       {{#if reward}}
-        Discount Earned
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.percent.description'}}
       {{else}}
-        Discount Pending
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.pendingReward.percent'}}
       {{/if}}
     {{/if}}
   </div>

@@ -3,12 +3,12 @@
     <div class="input-group">
       <input class="form-control" id="squatch-share-link" value="{{shareLinks.shareLink}}" readonly="readonly">
 
-      <span class="label label-default fade" id="squatch-share-notification">Copied!</span>
+      <span class="label label-default fade" id="squatch-share-notification">{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareNotification'}}</span>
 
       <span class="input-group-btn">
         <button class="btn btn-primary icon-btn copy" data-clipboard-target="#squatch-share-link" data-clipboard-notification="#squatch-share-notification">
           <i class="icon icon-link"></i>
-          <span class="hidden-sm">Copy</span>
+          <span class="hidden-sm">{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareButtons.copy'}}</span>
         </button>
       </span>
     </div>
@@ -19,56 +19,68 @@
       <a class="btn btn-email squatch-share-btn emailShare {{variables 'widget.REFERRER_WIDGET.content.sharingOptions.EMAIL.emailDisplayRule'}}"
          target="{{#if (stringCompare mode "POPUP" emptyOnFalse=true)}}_blank{{else}}{{#if (stringCompare mode "EMBED" emptyOnFalse=true)}}_blank{{else}}_self{{/if}}{{/if}}">
         <i class="icon icon-mail"></i>
-        Email
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.shareButtons.email'}}
       </a>
-  
+
       <a class="btn btn-twitter squatch-share-btn twShare {{variables 'widget.REFERRER_WIDGET.content.sharingOptions.TWITTER.twitterDisplayRule'}}"
          target="{{#if (stringCompare mode "POPUP" emptyOnFalse=true)}}_blank{{else}}{{#if (stringCompare mode "EMBED" emptyOnFalse=true)}}_blank{{else}}_self{{/if}}{{/if}}">
         <i class="icon icon-twitter"></i>
-        Tweet
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.shareButtons.twitter'}}
       </a>
-  
+
       <a class="btn btn-twitter squatch-share-btn twMobile {{variables 'widget.REFERRER_WIDGET.content.sharingOptions.TWITTER.twitterDisplayRule'}}"
          target="{{#if (stringCompare mode "POPUP" emptyOnFalse=true)}}_blank{{else}}{{#if (stringCompare mode "EMBED" emptyOnFalse=true)}}_blank{{else}}_self{{/if}}{{/if}}">
         <i class="icon icon-twitter"></i>
-        Tweet
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.shareButtons.twitter'}}
       </a>
-  
+
       <a class="btn btn-sms squatch-share-btn smsShare {{variables 'widget.REFERRER_WIDGET.content.sharingOptions.SMS.smsDisplayRule'}}"
          target="{{#if (stringCompare mode "POPUP" emptyOnFalse=true)}}_blank{{else}}{{#if (stringCompare mode "EMBED" emptyOnFalse=true)}}_blank{{else}}_self{{/if}}{{/if}}">
         <i class="icon icon-chat"></i>
-        SMS
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.shareButtons.sms'}}
       </a>
-  
+
       <a class="btn btn-messenger squatch-share-btn messengerShare {{variables 'widget.REFERRER_WIDGET.content.sharingOptions.FBMESSENGER.facebookDisplayRule'}}"
          target="{{#if (stringCompare mode "POPUP" emptyOnFalse=true)}}_blank{{else}}{{#if (stringCompare mode "EMBED" emptyOnFalse=true)}}_blank{{else}}_self{{/if}}{{/if}}">
         <i class="icon icon-messenger"></i>
-        Messenger
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.shareButtons.facebookMessenger'}}
       </a>
-  
+
       <a class="btn btn-messenger squatch-share-btn messengerMobile {{variables 'widget.REFERRER_WIDGET.content.sharingOptions.FBMESSENGER.facebookDisplayRule'}}"
          target="{{#if (stringCompare mode "POPUP" emptyOnFalse=true)}}_blank{{else}}{{#if (stringCompare mode "EMBED" emptyOnFalse=true)}}_blank{{else}}_self{{/if}}{{/if}}">
         <i class="icon icon-messenger"></i>
-        Messenger
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.shareButtons.facebookMessenger'}}
       </a>
-  
+
       <a class="btn btn-facebook squatch-share-btn fbShare {{variables 'widget.REFERRER_WIDGET.content.sharingOptions.FACEBOOK.facebookDisplayRule'}}"
          target="{{#if (stringCompare mode "POPUP" emptyOnFalse=true)}}_blank{{else}}{{#if (stringCompare mode "EMBED" emptyOnFalse=true)}}_blank{{else}}_self{{/if}}{{/if}}">
         <i class="icon icon-facebook"></i>
-        Share
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.shareButtons.facebook'}}
       </a>
-  
+
       <a class="btn btn-facebook squatch-share-btn fbMobile {{variables 'widget.REFERRER_WIDGET.content.sharingOptions.FACEBOOK.facebookDisplayRule'}}"
          target="{{#if (stringCompare mode "POPUP" emptyOnFalse=true)}}_blank{{else}}{{#if (stringCompare mode "EMBED" emptyOnFalse=true)}}_blank{{else}}_self{{/if}}{{/if}}">
         <i class="icon icon-facebook"></i>
-        Share
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.shareButtons.facebook'}}
       </a>
-  
+
       <a class="btn btn-whatsapp squatch-share-btn whatsappShare {{variables 'widget.REFERRER_WIDGET.content.sharingOptions.WHATSAPP.whatsappDisplayRule'}}"
          target="{{#if (stringCompare mode "POPUP" emptyOnFalse=true)}}_blank{{else}}{{#if (stringCompare mode "EMBED" emptyOnFalse=true)}}_blank{{else}}_self{{/if}}{{/if}}">
         <i class="icon icon-whatsapp"></i>
-        WhatsApp
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.shareButtons.whatsapp'}}
       </a>
-    </div>
+    
+      <a class="btn btn-linkedin squatch-share-btn linkedinShare {{variables 'widget.REFERRER_WIDGET.content.sharingOptions.LINKEDIN.linkedinDisplayRule'}}"
+         target="{{#if (stringCompare mode "POPUP" emptyOnFalse=true)}}_blank{{else}}{{#if (stringCompare mode "EMBED" emptyOnFalse=true)}}_blank{{else}}_self{{/if}}{{/if}}">
+        <i class="icon icon-linkedin"></i>
+        Linkedin
+      </a>
+
+      <a class="btn btn-linkedin squatch-share-btn linkedinMobile {{variables 'widget.REFERRER_WIDGET.content.sharingOptions.LINKEDIN.linkedinDisplayRule'}}"
+         target="{{#if (stringCompare mode "POPUP" emptyOnFalse=true)}}_blank{{else}}{{#if (stringCompare mode "EMBED" emptyOnFalse=true)}}_blank{{else}}_self{{/if}}{{/if}}">
+        <i class="icon icon-linkedin"></i>
+        Linkedin
+      </a>
+    </div>  
   </div>
 </div>

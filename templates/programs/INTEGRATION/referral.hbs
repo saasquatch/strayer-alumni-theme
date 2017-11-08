@@ -13,9 +13,9 @@
         {{description}}
       {{else}}
         {{#if reward}}
-          Paid User
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.completedReferral.user'}}
         {{else}}
-          Trial User
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.uncompletedReferral.user'}}
         {{/if}}
       {{/if}}
     </span>
@@ -29,7 +29,7 @@
     ">
       {{#if reward}}
         {{#if reward.value}}
-          ${{math reward.value ' / 100'}}
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.value'}}
         {{else}}
           {{#if referred}}
             {{format-reward 'REFERRED' includeUnit=true}}
@@ -39,9 +39,9 @@
         {{/if}}
       {{else}}
         {{#if referred}}
-          {{format-reward 'REFERRED' includeUnit=true}} Pending
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.pendingReward.referredReward'}}
         {{else}}
-          {{format-reward 'REFERRER' includeUnit=true}} Pending
+          {{variables 'widget.REFERRER_WIDGET.content.textVariables.pendingReward.referrerReward'}}
         {{/if}}
       {{/if}}
     </span>
@@ -54,9 +54,9 @@
       {{heading}}
     {{else}}
       {{#if reward}}
-        Signed Up
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.completedReferral.title'}}
       {{else}}
-        Referred
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.uncompletedReferral.title'}}
       {{/if}}
     {{/if}}
   </div>
@@ -76,7 +76,7 @@
     {{#if reward}}
 
       {{#if reward.value}}
-        ${{math reward.value ' / 100'}}
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.value'}}
       {{else}}
         {{#if referred}}
           {{format-reward 'REFERRED' includeUnit=true}}
@@ -86,7 +86,7 @@
       {{/if}}
 
     {{else}}
-      Trial Signup
+      {{variables 'widget.REFERRER_WIDGET.content.textVariables.pendingReward.title'}}
     {{/if}}
   </div>
 
@@ -99,9 +99,9 @@
   ">
       {{#if reward}}
         {{#if name}}{{name}} {{/if}}
-        Gift card
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.giftcard.description'}}
       {{else}}
-        Gift card Pending
+        {{variables 'widget.REFERRER_WIDGET.content.textVariables.pendingReward.giftcard'}}
       {{/if}}
   </div>
 </td>

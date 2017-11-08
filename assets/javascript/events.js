@@ -231,3 +231,26 @@ function emailHandler() {
     });
   }
 }
+
+function linkedinHandler() {
+  var linkedinBtn = document.getElementsByClassName('linkedinShare')[0];
+
+  if (!linkedinBtn) return;
+
+  var pictureString = (squatch.user.linkedin.shareImage == "" || squatch.user.linkedin.shareImage === null) ? "" : "&picture="+squatch.user.linkedin.shareImage;
+  var linkedinUrl = "https://www.linkedin.com/shareArticle?mini=true&url="+squatch.user.linkedin.link+"&title="+squatch.user.linkedin.title+"&summary="+squatch.user.linkedin.summary+pictureString+"&source="+squatch.user.linkedin.redirectUrl;
+  linkedinBtn.href = linkedinUrl;
+
+  handleClicks(linkedinBtn, function(e) {
+    if (e.type != 'touchstart') {
+      e.preventDefault();
+
+      var url = linkedinUrl + "&display=popup";
+      window.open(url, 'linkedin', 'status=0,width=620,height=400');
+    }
+
+    if (window.frameElement && window.frameElement.squatchJsApi) {
+      window.frameElement.squatchJsApi._shareEvent(window.squatch, 'LINKEDIN');
+    }
+  });
+}

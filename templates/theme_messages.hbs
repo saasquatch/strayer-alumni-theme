@@ -31,7 +31,7 @@
       title: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.FACEBOOK.facebookShareSubject')}}',
       summary: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.FACEBOOK.facebookShareBody')}}',
       link: '{{shareLinks.facebookShareLink}}',
-{{#if variables.widget.REFERRER_WIDGET.content.sharingOptions.FACEBOOK.facebookShareImageURL}}
+{{#if (variables 'widget.REFERRER_WIDGET.content.sharingOptions.FACEBOOK.facebookShareImageURL')}}
       shareImage: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.FACEBOOK.facebookShareImageURL')}}',
 {{else}}
       shareImage: null,
@@ -47,6 +47,18 @@
     },
     whatsapp: {
       body: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.WHATSAPP.whatsAppShareBody') space="%20"}}'
+    },
+    linkedin: {
+      title: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.LINKEDIN.linkedinShareSubject')}}',
+      summary: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.LINKEDIN.linkedinShareBody')}}',
+      link: '{{share-link 'LINKEDIN'}}',
+    {{#if variables.widget.REFERRER_WIDGET.content.sharingOptions.LINKEDIN.linkedinShareImageURL}}
+      shareImage: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.LINKEDIN.linkedinShareImageURL')}}',
+    {{else}}
+      shareImage: null,
+    {{/if}}
+      appId: '157382547792399',
+      redirectUrl: 'http://app.referralsaasquatch.com/widget/close'
     },
     fallbackImg: 'https://www.gravatar.com/avatar/0?d=blank'
   };

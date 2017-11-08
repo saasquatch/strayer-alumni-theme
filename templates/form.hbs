@@ -1,4 +1,11 @@
-<div class="squatch-register">
+<div class="squatch-register 
+{{#unless fields.email}}
+  {{#unless fields.lastName}}
+    {{#unless fields.firstName}}
+      hidden
+    {{/unless}}
+  {{/unless}}
+{{/unless}}">
 
   {{text}}
 
@@ -9,7 +16,9 @@
     {{#if fields.lastName}}
       <input id="squatch-user-lastname" class="form-control input-field" placeholder="Last Name">
     {{/if}}
-    <input id="squatch-user-email" class="form-control input-field" placeholder="Email (Required)"/>
-    <button id="squatch-send-email" class="btn btn-primary">Continue</button>
+    {{#if fields.email}}
+      <input id="squatch-user-email" class="form-control input-field" placeholder="Email"/>
+    {{/if}}
+    <button id="squatch-send-email" class="btn btn-primary">{{variables 'widget.REFERRER_WIDGET.content.textVariables.registerButton'}}</button>
   </div>
 </div>
