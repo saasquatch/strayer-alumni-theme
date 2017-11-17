@@ -258,6 +258,9 @@
                                           },
                                           "whatsapp": {
                                              "default": "WhatsApp"
+                                          },
+                                          "linkedin": {
+                                             "default": "Linkedin"
                                           }
                                        }
                                     },
