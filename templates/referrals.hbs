@@ -74,15 +74,7 @@
 
     {{#each rewardsBySource.PROGRAM}}
       {{#unless isCancelled}}
-        <tr id="{{#if ../referredBy.dateReferred}}
-                    {{#if ../referredBy.hasCancelledReferredReward}}
-                      {{math @index '+ 1 +' referralsLength}}
-                    {{else}}
-                      {{math @index '+ 2 +' referralsLength}}
-                    {{/if}}
-                {{else}}
-                  {{math @index '+ 1 +' referralsLength}}
-                {{/if}}">
+        <tr id="{{#if ../referredBy.dateReferred}}{{#if ../referredBy.hasCancelledReferredReward}}{{math @index '+ 1 +' referralsLength}}{{else}}{{math @index '+ 1 +' referralsLength}}{{/if}}{{else}}{{math @index '+ 1 +' referralsLength}}{{/if}}">
           {{#block
             "arbitraryReward"
             description=(variables 'widget.REFERRER_WIDGET.content.textVariables.arbitraryReward.description')
