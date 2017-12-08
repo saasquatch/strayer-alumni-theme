@@ -162,6 +162,18 @@
                                              "default":true
                                           }
                                        }
+                                    },
+                                    "referralsPanel":{
+                                       "title":"Referral Panel Options",
+                                       "type":"object",
+                                       "properties":{
+                                          "showReferrer":{
+                                             "title":"Show Referring User",
+                                             "type":"boolean",
+                                             "format":"checkbox",
+                                             "default":"true"
+                                          }
+                                       }
                                     }
                                  }
                               },
