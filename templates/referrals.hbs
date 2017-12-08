@@ -31,7 +31,7 @@
 
     {{#each referrals}}
       {{#unless hasCancelledReferrerReward}}
-        <tr id="{{#if options.showReferrer}}{{#if ../referredBy.dateReferred}}{{#if ../referredBy.hasCancelledReferredReward}}{{math @index}}{{else}}{{math @index '+ 1'}}{{/if}}{{else}}{{math @index}}{{/if}}{{else}}{{math @index}}{{/if}} ">
+        <tr id="{{#if options.showReferrer}}{{#if ../referredBy.dateReferred}}{{#if ../referredBy.hasCancelledReferredReward}}{{math @index}}{{else}}{{math @index '+ 1'}}{{/if}}{{else}}{{math @index}}{{/if}}{{else}}{{math @index}}{{/if}}">
           {{#block
             "referredUser"
             referral=referredUser
@@ -76,7 +76,7 @@
 
     {{#each rewardsBySource.PROGRAM}}
       {{#unless isCancelled}}
-        <tr id="{{#if options.showReferrer}}{{#if ../referredBy.dateReferred}}{{#if ../referredBy.hasCancelledReferredReward}}{{math @index '+ 1 +' referralsLength}}{{else}}{{math @index '+ 1 +' referralsLength}}{{/if}}{{else}}{{math @index '+ 1 +' referralsLength}}{{/if}}{{else}}{{math @index '+ 1 +' referralsLength}}{{/if}}">
+        <tr id="{{#if ../referredBy.dateReferred}}{{#if ../referredBy.hasCancelledReferredReward}}{{math @index '+ 1 +' referralsLength}}{{else}}{{math @index '+ 1 +' referralsLength}}{{/if}}{{else}}{{math @index '+ 1 +' referralsLength}}{{/if}}">
           {{#block
             "arbitraryReward"
             description=(variables 'widget.REFERRER_WIDGET.content.textVariables.arbitraryReward.description')
