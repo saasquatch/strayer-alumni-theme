@@ -164,11 +164,11 @@
                                        }
                                     },
                                     "referralsPanel":{
-                                       "title":"Referral Panel Options",
+                                       "title":"Rewards Panel Options",
                                        "type":"object",
                                        "properties":{
                                           "showReferrer":{
-                                             "title":"Show Referring User",
+                                             "title":"Show \"Referred You\" entry",
                                              "type":"boolean",
                                              "format":"checkbox",
                                              "default":"true"
