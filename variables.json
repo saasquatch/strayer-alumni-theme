@@ -162,6 +162,18 @@
                                              "default":true
                                           }
                                        }
+                                    },
+                                    "referralsPanel":{
+                                       "title":"Rewards Panel Options",
+                                       "type":"object",
+                                       "properties":{
+                                          "showReferrer":{
+                                             "title":"Show \"Referred You\" entry",
+                                             "type":"boolean",
+                                             "format":"checkbox",
+                                             "default":"true"
+                                          }
+                                       }
                                     }
                                  }
                               },

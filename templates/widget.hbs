@@ -54,7 +54,7 @@
       {{#if user.email}}
         <div id="squatch-panel">
           {{> panel_summary}}
-          {{> referrals}}
+          {{> referrals options=(variables-object 'widget.REFERRER_WIDGET.content.widgetCustomization.referralsPanel')}}
           {{> attribution}}
         </div>
 
@@ -68,7 +68,7 @@
             {{#unless (variables 'widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.firstName')}}
               <div id="squatch-panel">
                 {{> panel_summary}}
-                {{> referrals}}
+                {{> referrals options=(variables-object 'widget.REFERRER_WIDGET.content.widgetCustomization.referralsPanel')}}
                 {{> attribution}}
               </div>
             {{/unless}}

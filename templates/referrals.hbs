@@ -10,26 +10,28 @@
 
   <table class="squatch-referrals-list">
     {{#if referredBy.referredByUser}}
-      {{#unless referredBy.hasCancelledReferredReward}}
-        <tr id="0">
-          {{#block
-            "referredByUser"
-            referral=referredBy.referredByUser
-            description=(variables 'widget.REFERRER_WIDGET.content.textVariables.referredByUser.description')
-            heading=(variables 'widget.REFERRER_WIDGET.content.textVariables.referredByUser.heading')
-            referred=(variables 'widget.REFERRER_WIDGET.content.textVariables.referredByUser.referred')
-            reward=referredBy.referredReward
-            dateReferred=referredBy.dateReferred}}
+      {{#if options.showReferrer}}
+        {{#unless referredBy.hasCancelledReferredReward}}
+          <tr id="0">
+            {{#block
+              "referredByUser"
+              referral=referredBy.referredByUser
+              description=(variables 'widget.REFERRER_WIDGET.content.textVariables.referredByUser.description')
+              heading=(variables 'widget.REFERRER_WIDGET.content.textVariables.referredByUser.heading')
+              referred=(variables 'widget.REFERRER_WIDGET.content.textVariables.referredByUser.referred')
+              reward=referredBy.referredReward
+              dateReferred=referredBy.dateReferred}}
 
-             {{> (stringFormat "programs/%s/referral" programDetails.referredRewardDetails.rewardType)}}
-          {{/block}}
-        </tr>
-      {{/unless}}
+               {{> (stringFormat "programs/%s/referral" programDetails.referredRewardDetails.rewardType)}}
+            {{/block}}
+          </tr>
+        {{/unless}}
+      {{/if}}
     {{/if}}
 
     {{#each referrals}}
       {{#unless hasCancelledReferrerReward}}
-        <tr id="{{#if ../referredBy.dateReferred}}{{#if ../referredBy.hasCancelledReferredReward}}{{math @index}}{{else}}{{math @index '+ 1'}}{{/if}}{{else}}{{math @index}}{{/if}}">
+        <tr id="{{#if options.showReferrer}}{{#if ../referredBy.dateReferred}}{{#if ../referredBy.hasCancelledReferredReward}}{{math @index}}{{else}}{{math @index '+ 1'}}{{/if}}{{else}}{{math @index}}{{/if}}{{else}}{{math @index}}{{/if}}">
           {{#block
             "referredUser"
             referral=referredUser
@@ -52,7 +54,7 @@
 
     {{#each rewardsBySource.MANUAL}}
       {{#unless isCancelled}}
-        <tr id="{{#if ../referredBy.dateReferred}}{{#if ../referredBy.hasCancelledReferredReward}}{{math @index '+' referralsLength}}{{else}}{{math @index '+ 1 +' referralsLength}}{{/if}}{{else}}{{math @index '+' referralsLength}}{{/if}}">
+        <tr id="{{#if options.showReferrer}}{{#if ../referredBy.dateReferred}}{{#if ../referredBy.hasCancelledReferredReward}}{{math @index '+' referralsLength}}{{else}}{{math @index '+ 1 +' referralsLength}}{{/if}}{{else}}{{math @index '+' referralsLength}}{{/if}}{{else}}{{math @index '+' referralsLength}}{{/if}}">
           {{#block
             "arbitraryReward"
             description=(variables 'widget.REFERRER_WIDGET.content.textVariables.arbitraryReward.description')
