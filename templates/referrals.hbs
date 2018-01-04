@@ -11,21 +11,23 @@
   <table class="squatch-referrals-list">
     {{#if referredBy.referredByUser}}
       {{#if options.showReferrer}}
-        {{#unless referredBy.hasCancelledReferredReward}}
-          <tr id="0">
-            {{#block
-              "referredByUser"
-              referral=referredBy.referredByUser
-              description=(variables 'widget.REFERRER_WIDGET.content.textVariables.referredByUser.description')
-              heading=(variables 'widget.REFERRER_WIDGET.content.textVariables.referredByUser.heading')
-              referred=(variables 'widget.REFERRER_WIDGET.content.textVariables.referredByUser.referred')
-              reward=referredBy.referredReward
-              dateReferred=referredBy.dateReferred}}
+        {{#if referredBy.referredReward}}
+          {{#unless referredBy.hasCancelledReferredReward}}
+            <tr id="0">
+              {{#block
+                "referredByUser"
+                referral=referredBy.referredByUser
+                description=(variables 'widget.REFERRER_WIDGET.content.textVariables.referredByUser.description')
+                heading=(variables 'widget.REFERRER_WIDGET.content.textVariables.referredByUser.heading')
+                referred=(variables 'widget.REFERRER_WIDGET.content.textVariables.referredByUser.referred')
+                reward=referredBy.referredReward
+                dateReferred=referredBy.dateReferred}}
 
-               {{> (stringFormat "programs/%s/referral" programDetails.referredRewardDetails.rewardType)}}
-            {{/block}}
-          </tr>
-        {{/unless}}
+                {{> (stringFormat "programs/%s/referral" programDetails.referredRewardDetails.rewardType)}}
+              {{/block}}
+            </tr>
+          {{/unless}}
+        {{/if}}
       {{/if}}
     {{/if}}
 
