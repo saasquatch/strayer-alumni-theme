@@ -1415,7 +1415,7 @@
                      "format":"checkbox",
                      "title":"Enable Share Link",
                      "propertyOrder":5,
-                     "default":false
+                     "default":true
                   },
                   "shareButtonHeader":{
                      "type":"string",
