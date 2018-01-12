@@ -94,7 +94,7 @@ function messengerMobileHandler() {
   var messengerMobileUrl = 'fb-messenger://share?link=' + squatch.user.facebook.link + '&app_id=' + squatch.user.facebook.appId;
   messengerMobile.href = messengerMobileUrl;
 
-  var md = new MobileDetect('Version/4.0 Mobile Safari/534.30');
+  var md = new MobileDetect(window.navigator.userAgent);
   var UA = md.userAgent();
 
   if (UA === 'Safari') {
@@ -117,7 +117,7 @@ function smsHandler() {
   var smsUrl = 'sms:?&body=' + squatch.user.sms.body;
   smsBtn.href = smsUrl;
 
-  var md = new MobileDetect('Version/4.0 Mobile Safari/534.30');
+  var md = new MobileDetect(window.navigator.userAgent);
   var UA = md.userAgent();
 
   if (UA === 'Safari') {
@@ -139,7 +139,7 @@ function whatsappHandler() {
   var whatsappUrl = 'whatsapp://send?text=' + squatch.user.whatsapp.body;
   whatsappBtn.href = whatsappUrl;
 
-  var md = new MobileDetect('Version/4.0 Mobile Safari/534.30');
+  var md = new MobileDetect(window.navigator.userAgent);
   var UA = md.userAgent();
 
   if (UA === 'Safari') {
@@ -203,7 +203,7 @@ function emailHandler() {
   if(!emailBtn) return;
   // emailBtn.href = emailUrl;
 
-  var md = new MobileDetect('Version/4.0 Mobile Safari/534.30');
+  var md = new MobileDetect(window.navigator.userAgent);
   var UA = md.userAgent();
 
   emailBtn.href = emailUrl;
