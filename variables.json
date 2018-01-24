@@ -398,10 +398,10 @@
                                     "nonReferralReward": {
                                        "properties": {
                                           "manualTitle": {
-                                             "default": "Manual Reward"
+                                             "default": "Reward"
                                           },
                                           "programTitle": {
-                                             "default": "Program Reward"
+                                             "default": "Reward"
                                           },
                                           "creditReward": {
                                              "default": "${{math value '/ 100'}}"
