@@ -481,7 +481,7 @@
                                        "default":"You were Successfully Referred to {{companyName}}"
                                     },
                                     "headerDetails":{
-                                       "default":"Use the Referral Code<br><span id=\"squatch-share-code\">{{referredBy.referredReward.referralCode}}</span><br>at checkout to receive your referral reward"
+                                       "default":"Use the Referral Code<br><span id=\"squatch-share-code\">{{referredBy.referredByUser.referralCode}}</span><br>at checkout to receive your referral reward"
                                     },
                                     "headerDetailsFuelTank":{
                                        "type":"string",
