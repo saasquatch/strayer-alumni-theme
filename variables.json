@@ -740,6 +740,51 @@
                      ]
                   }
                }
+            },
+            "REFERRED_REWARD_EARNED":{
+               "type":"object",
+               "properties":{
+                  "configuration":{
+                     "allOf":[
+                        {
+                           "properties":{
+                              "subject":{
+                                 "default":"​{{stringEmptyHandler newReferral.referredUser.firstName onEmpty='A friend'}}​ helped you get one step closer to {{format-reward 'REFERRER' includeUnit=true includeContextualText=true}}!"
+                              },
+                              "themeMapping":{
+                                 "default":"emails/referral-started"
+                              }
+                           }
+                        },
+                        {
+                           "$ref":"#/definitions/email/definitions/configuration"
+                        }
+                     ]
+                  },
+                  "content":{
+                     "allOf":[
+                        {
+                           "properties":{
+                              "headerImageUrl":{
+                                 "default":"{{assets 'images/email/referral-started-header.png'}}"
+                              },
+                              "headerContent":{
+                                 "default":"#Good News!\nYour friend has signed up for a free account with {{companyName}}!"
+                              },
+                              "bodyContent":{
+                                 "default":"{{stringEmptyHandler newReferral.referredUser.firstName onEmpty='A friend'}}​ is currently trying out {{companyName}}. As a thank you from us, if they become a paying user, you will automatically receive {{format-reward 'REFERRER' includeUnit=true includeContextualText=true}}"
+                              }
+                           }
+                        },
+                        {
+                           "$ref":"#/definitions/email/definitions/generalContent"
+                        },
+                        {
+                           "$ref":"#/definitions/email/definitions/shareContent"
+                        }
+                     ]
+                  }
+               }
             }
          }
       }
