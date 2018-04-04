@@ -749,10 +749,10 @@
                         {
                            "properties":{
                               "subject":{
-                                 "default":"​{{stringEmptyHandler newReferral.referredUser.firstName onEmpty='A friend'}}​ helped you get one step closer to {{format-reward 'REFERRER' includeUnit=true includeContextualText=true}}!"
+                                 "default":"Congrats! You have earned {{format-reward 'REFERRED' includeUnit=true}} of free credit with {{companyName}}"
                               },
                               "themeMapping":{
-                                 "default":"emails/referral-started"
+                                 "default":"emails/referred-reward-earned"
                               }
                            }
                         },
@@ -769,10 +769,36 @@
                                  "default":"{{assets 'images/email/referral-started-header.png'}}"
                               },
                               "headerContent":{
-                                 "default":"#Good News!\nYour friend has signed up for a free account with {{companyName}}!"
+                                 "default":"#Congratulations\nYou have earned a reward with {{companyName}}!"
                               },
                               "bodyContent":{
-                                 "default":"{{stringEmptyHandler newReferral.referredUser.firstName onEmpty='A friend'}}​ is currently trying out {{companyName}}. As a thank you from us, if they become a paying user, you will automatically receive {{format-reward 'REFERRER' includeUnit=true includeContextualText=true}}"
+                                 "default":"You have now earned {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}} with {{companyName}}.",
+                                 "options":{
+                                    "hideFor":{
+                                       "programSettingsReferredRewardTypes":[
+                                          "INTEGRATION"
+                                       ]
+                                    }
+                                 }
+                              },
+                              "giftcardBodyContent":{
+                                 "type":"string",
+                                 "title":"Body Content",
+                                 "format":"markdown",
+                                 "propertyOrder":3,
+                                 "default":"You have now earned {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}. You should receive an email shortly with instructions for redemption.",
+                                 "options":{
+                                    "hidden":true,
+                                    "validate":[
+                                       "handlebars"
+                                    ],
+                                    "input_height":"50px",
+                                    "showFor":{
+                                       "programSettingsReferredRewardTypes":[
+                                          "INTEGRATION"
+                                       ]
+                                    }
+                                 }
                               }
                            }
                         },
