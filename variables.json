@@ -740,6 +740,77 @@
                      ]
                   }
                }
+            },
+            "REFERRED_REWARD_EARNED":{
+               "type":"object",
+               "properties":{
+                  "configuration":{
+                     "allOf":[
+                        {
+                           "properties":{
+                              "subject":{
+                                 "default":"Congrats! You have earned {{format-reward 'REFERRED' includeUnit=true}} of free credit with {{companyName}}"
+                              },
+                              "themeMapping":{
+                                 "default":"emails/referred-reward-earned"
+                              }
+                           }
+                        },
+                        {
+                           "$ref":"#/definitions/email/definitions/configuration"
+                        }
+                     ]
+                  },
+                  "content":{
+                     "allOf":[
+                        {
+                           "properties":{
+                              "headerImageUrl":{
+                                 "default":"{{assets 'images/email/referral-started-header.png'}}"
+                              },
+                              "headerContent":{
+                                 "default":"#Congratulations\nYou have earned a reward with {{companyName}}!"
+                              },
+                              "bodyContent":{
+                                 "default":"You have now earned {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}} with {{companyName}}.",
+                                 "options":{
+                                    "hideFor":{
+                                       "programSettingsReferredRewardTypes":[
+                                          "INTEGRATION"
+                                       ]
+                                    }
+                                 }
+                              },
+                              "giftcardBodyContent":{
+                                 "type":"string",
+                                 "title":"Body Content",
+                                 "format":"markdown",
+                                 "propertyOrder":3,
+                                 "default":"You have now earned {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}}. You should receive an email shortly with instructions for redemption.",
+                                 "options":{
+                                    "hidden":true,
+                                    "validate":[
+                                       "handlebars"
+                                    ],
+                                    "input_height":"50px",
+                                    "showFor":{
+                                       "programSettingsReferredRewardTypes":[
+                                          "INTEGRATION"
+                                       ]
+                                    }
+                                 }
+                              }
+                           }
+                        },
+                        {
+                           "$ref":"#/definitions/email/definitions/generalContent"
+                        },
+                        {
+                           "$ref":"#/definitions/email/definitions/shareContent"
+                        }
+                     ]
+                  }
+               }
             }
          }
       }
