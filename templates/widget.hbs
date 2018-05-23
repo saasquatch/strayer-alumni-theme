@@ -51,15 +51,49 @@
         {{> share}}
       </div>
 
-      {{> _squatch-panel}}
-      {{> _squatch-form}}
-        {{!-- {{#unless variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.email}}
-          {{#unless variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName}}
-            {{#unless variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.firstName}}
+      {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.email}}
+        {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.firstName}}
+          {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName}}
+            {{#if user.email}}
+              {{#if user.firstName}}
+                {{#if user.lastName}}
+                  {{> _squatch-panel}}
+                {{else}} {{> _squatch-form}} {{/if}}
+              {{else}} {{> _squatch-form}} {{/if}}
+            {{else}} {{> _squatch-form}} {{/if}}
+          {{else}}
+            {{#if user.email}}
+              {{#if user.firstName}}
+                {{> _squatch-panel}}
+              {{else}} {{> _squatch-form}} {{/if}}
+            {{else}} {{> _squatch-form}} {{/if}}
+          {{/if}}
+        {{else}}
+          {{#if user.email}}
+            {{> _squatch-panel}}
+          {{else}} {{> _squatch-form}} {{/if}}
+        {{/if}}
+      {{else}}
+        {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.firstName}}
+          {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName}}
+            {{#if user.firstName}}
+              {{#if user.lastName}}
+                {{> _squatch-panel}}
+              {{else}} {{> _squatch-form}} {{/if}}
+            {{else}} {{> _squatch-form}} {{/if}}
+          {{else}}
+            {{#if user.firstName}}
               {{> _squatch-panel}}
-            {{/unless}}
-          {{/unless}}
-        {{/unless}} --}}
+            {{else}} {{> _squatch-form}} {{/if}}
+          {{/if}}
+        {{else}}
+          {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName}}
+            {{#if user.lastName}}
+              {{> _squatch-panel}}
+            {{else}} {{> _squatch-form}} {{/if}}
+          {{else}} {{> _squatch-panel}} {{/if}}
+        {{/if}}
+      {{/if}}
     </main>
 
     <div id="cta">
