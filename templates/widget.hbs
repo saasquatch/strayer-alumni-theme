@@ -54,8 +54,7 @@
       {{> _squatch-panel}}
       {{> _squatch-form}}
       <script>
-        console.log('variables: ', variables)
-        console.log('user: ', user)
+        console.log('variables: ', {{#variables widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.email}} 'something' {{/if}})
       </script>
         {{!-- {{#unless variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.email}}
           {{#unless variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName}}
