@@ -51,18 +51,19 @@
         {{> share}}
       </div>
 
-      {{#if user.email}}
-        {{> _squatch-panel}}
-      {{else}}
-        {{> _squatch-form}}
-        {{#unless variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.email}}
+      {{> _squatch-panel}}
+      {{> _squatch-form}}
+      <script>
+        console.log('variables: ', variables)
+        console.log('user: ', user)
+      </script>
+        {{!-- {{#unless variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.email}}
           {{#unless variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName}}
             {{#unless variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.firstName}}
               {{> _squatch-panel}}
             {{/unless}}
           {{/unless}}
-        {{/unless}}
-      {{/if}}
+        {{/unless}} --}}
     </main>
 
     <div id="cta">
