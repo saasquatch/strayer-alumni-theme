@@ -52,13 +52,13 @@
       </div>
 
       {{#if user.email}}
-        {{> _panel}}
+        {{> _squatch-panel}}
       {{else}}
-        {{> _form}}
-        {{#unless (variables 'widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.email')}}
-          {{#unless (variables 'widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName')}}
-            {{#unless (variables 'widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.firstName')}}
-              {{> _panel}}
+        {{> _squatch-form}}
+        {{#unless variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.email}}
+          {{#unless variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName}}
+            {{#unless variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.firstName}}
+              {{> _squatch-panel}}
             {{/unless}}
           {{/unless}}
         {{/unless}}

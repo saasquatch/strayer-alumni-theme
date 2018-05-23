@@ -140,7 +140,7 @@
                                        }
                                     },
                                     "registrationFields":{
-                                       "title":"Optional Registration Fields",
+                                       "title":"Required Registration Fields",
                                        "type":"object",
                                        "properties":{
                                           "firstName":{
@@ -509,7 +509,7 @@
                                        }
                                     },
                                     "registrationFields":{
-                                       "title":"Optional Registration Fields",
+                                       "title":"Required Registration Fields",
                                        "type":"object",
                                        "properties":{
                                           "firstName":{
