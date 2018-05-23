@@ -52,25 +52,13 @@
       </div>
 
       {{#if user.email}}
-        <div id="squatch-panel">
-          {{> panel_summary}}
-          {{> referrals options=(variables-object 'widget.REFERRER_WIDGET.content.widgetCustomization.referralsPanel')}}
-          {{> attribution}}
-        </div>
-
-        {{> actions}}
+        {{> _panel}}
       {{else}}
-        {{> form
-            text=(variables 'widget.REFERRER_WIDGET.content.widgetCustomization.registrationHeader')
-            fields=(variables-object 'widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields')}}
+        {{> _form}}
         {{#unless (variables 'widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.email')}}
           {{#unless (variables 'widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName')}}
             {{#unless (variables 'widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.firstName')}}
-              <div id="squatch-panel">
-                {{> panel_summary}}
-                {{> referrals options=(variables-object 'widget.REFERRER_WIDGET.content.widgetCustomization.referralsPanel')}}
-                {{> attribution}}
-              </div>
+              {{> _panel}}
             {{/unless}}
           {{/unless}}
         {{/unless}}
