@@ -27,7 +27,7 @@ function emailFormHandler() {
       invalidInput(lastName, function(e) { return e.length < 1; });
     }
 
-    if (!isValidEmail(emailInput.value)) {
+    if (emailInput && !isValidEmail(emailInput.value)) {
       noErrors = false;
       invalidInput(emailInput, function(e) { return isValidEmail(e); });
     }
