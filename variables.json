@@ -243,8 +243,11 @@
                                           }
                                        }
                                     },
-                                    "shareNotification": {
+                                    "shareNotificationSuccess": {
                                        "default": "Copied!"
+                                    },
+                                    "shareNotificationFailure": {
+                                       "default": "Press Ctrl+C to copy"
                                     },
                                     "shareButtons": {
                                        "title": "Share Buttons",

@@ -68,12 +68,12 @@
           };
 
           var notifySuccess = function(e) {
-            notify(e.trigger.dataset.clipboardNotification, "Copied!");
+            notify(e.trigger.dataset.clipboardNotification, window.squatch.variables.shareNotification.success);
           };
 
           var notifyFailure = function(e) {
             //if the copy function failed the text should still be selected, so just ask the user to hit ctrl+c
-            notify(e.trigger.dataset.clipboardNotification, "Press Ctrl+C to copy");
+            notify(e.trigger.dataset.clipboardNotification, window.squatch.variables.shareNotification.failure);
           };
 
           clipboard.on('success', notifySuccess);

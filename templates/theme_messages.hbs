@@ -11,6 +11,13 @@
 <script>
   window.squatch = window.squatch || {};
 
+  window.squatch.variables = {
+    shareNotification: {
+      success: '{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareNotificationSuccess'}}',
+      failure: '{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareNotificationFailure'}}'
+    }
+  };
+
   window.squatch.user = {
     code     : '{{referredBy.referredByUser.referralCode}}',
     sharelink: '{{shareLinks.shareLink}}',
