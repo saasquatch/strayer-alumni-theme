@@ -195,6 +195,9 @@
                                  "title": "Text Variables",
                                  "type": "object",
                                  "properties": {
+                                    "lang": {
+                                      "default": "en"
+                                    },
                                     "attribution": {
                                        "default": "Powered By Saasquatch"
                                     },

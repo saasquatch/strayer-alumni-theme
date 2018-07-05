@@ -119,6 +119,9 @@
       }
     });
 
+    var lang = window.squatch.variables.lang
+    !lang || lang === 'en' ? null : moment.locale(lang)
+
     each(document.querySelectorAll('[data-moment]'), function(el) {
       if (isDOMElement(el)) {
         var time = moment(parseInt(el.textContent));
