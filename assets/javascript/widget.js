@@ -120,7 +120,8 @@
     });
 
     var lang = window.squatch.variables.lang
-    !lang || lang === 'en' ? null : moment.locale(lang)
+    var relativeTime = window.squatch.variables.relativeTime
+    lang && relativeTime ? moment.locale(lang, {relativeTime: relativeTime}) : null
 
     each(document.querySelectorAll('[data-moment]'), function(el) {
       if (isDOMElement(el)) {
