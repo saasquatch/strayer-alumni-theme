@@ -51,55 +51,7 @@
         {{> share}}
       </div>
 
-      {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.email}}
-        {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.firstName}}
-          {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName}}
-            {{#if user.email}}
-              {{#if user.firstName}}
-                {{#if user.lastName}}
-                  {{> _squatch-panel}}
-                {{else}} {{> _squatch-form}} {{/if}}
-              {{else}} {{> _squatch-form}} {{/if}}
-            {{else}} {{> _squatch-form}} {{/if}}
-          {{else}}
-            {{#if user.email}}
-              {{#if user.firstName}}
-                {{> _squatch-panel}}
-              {{else}} {{> _squatch-form}} {{/if}}
-            {{else}} {{> _squatch-form}} {{/if}}
-          {{/if}}
-        {{else}}
-          {{#if user.email}}
-            {{> _squatch-panel}}
-          {{else}} {{> _squatch-form}} {{/if}}
-        {{/if}}
-      {{else}}
-        {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.firstName}}
-          {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName}}
-            {{#if user.firstName}}
-              {{#if user.lastName}}
-                {{> _squatch-panel}}
-              {{else}} {{> _squatch-form}} {{/if}}
-            {{else}} {{> _squatch-form}} {{/if}}
-          {{else}}
-            {{#if user.firstName}}
-              {{> _squatch-panel}}
-            {{else}} {{> _squatch-form}} {{/if}}
-          {{/if}}
-        {{else}}
-          {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName}}
-            {{#if user.lastName}}
-              {{> _squatch-panel}}
-            {{else}} {{> _squatch-form}} {{/if}}
-          {{else}} {{> _squatch-panel}} {{/if}}
-        {{/if}}
-      {{/if}}
-    </main>
-
-    <div id="cta">
-      {{> cta-widget cta=(variables-object 'widget.REFERRER_WIDGET.cta')}}
-    </div>
-
+   
     <script src="{{assets 'libs/ready.min.js'}}"></script>
     <script src="{{assets 'libs/clipboard.min.js'}}"></script>
     <script src="{{assets 'libs/moment.min.js'}}"></script>
